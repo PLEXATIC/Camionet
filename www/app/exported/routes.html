@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Table - Brand</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+</head>
+
+<body id="page-top">
+    <div id="wrapper">
+        <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0">
+            <div class="container-fluid d-flex flex-column p-0">
+                <a class="navbar-brand d-flex justify-content-center align-items-center sidebar-brand m-0" href="#">
+                    <div class="sidebar-brand-icon rotate-n-15"></div>
+                    <div class="sidebar-brand-text mx-3"><span>Camionet</span></div>
+                </a>
+                <hr class="sidebar-divider my-0">
+                <ul class="nav navbar-nav text-light" id="accordionSidebar">
+                    <li class="nav-item"><a class="nav-link" href="index.html"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a></li>
+                    <li class="nav-item"><a class="nav-link active" href="routes.html"><i class="fa fa-location-arrow"></i><span>Routen</span></a><a class="nav-link" href="orders.html"><i class="fas fa-table"></i><span>Bestellungen</span></a><a class="nav-link" href="vehicles.html"><i class="fa fa-truck"></i><span>Fahrzeuge</span></a></li>
+                    <li
+                        class="nav-item"></li>
+                        <li class="nav-item"></li>
+                        <li class="nav-item"></li>
+                </ul>
+                <div class="text-center d-none d-md-inline"><button class="btn rounded-circle border-0" id="sidebarToggle" type="button"></button></div>
+            </div>
+        </nav>
+        <div class="d-flex flex-column" id="content-wrapper">
+            <div id="content">
+                <div class="container-fluid">
+                    <h3 class="text-dark mb-4" style="padding: 26px;">Geplante Routen</h3>
+                    <div class="card shadow">
+                        <div class="card-header py-3"><button class="btn btn-primary" type="button" style="margin: 15px;">Routen Generieren</button></div>
+                        <div class="card-body" style="height: 427px;">
+                            <div class="table-responsive table mt-2" id="dataTable" role="grid" aria-describedby="dataTable_info">
+                                <table class="table my-0" id="dataTable">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 173px;">Datum Tagesroute</th>
+                                            <th style="width: 176px;">Fahrzeug</th>
+                                            <th style="width: 54px;">Dauer</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>2008/11/28<br></td>
+                                            <td>Lastwagen1<br></td>
+                                            <td style="text-align: right;">7.5h</td>
+                                            <td style="width: 86px;">Pallet</td>
+                                            <td style="padding: 11px;"><a class="btn btn-primary btn-icon-split" role="button"><span class="text-white-50 icon"><i class="fas fa-map-marked-alt"></i></span><span class="text-white text">Route anzeigen</span></a><a class="btn btn-success btn-icon-split"
+                                                    role="button"><span class="text-white-50 icon"><i class="fas fa-check"></i></span><span class="text-white text">Erledigt</span></a><a class="btn btn-danger btn-icon-split" role="button"><span class="text-white-50 icon"><i class="fas fa-trash"></i></span></a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>2008/11/28<br></td>
+                                            <td>Lieferwagen1</td>
+                                            <td style="text-align: right;">8.3h</td>
+                                            <td>Pallet</td>
+                                            <td style="padding: 11px;"><a class="btn btn-primary btn-icon-split" role="button"><span class="text-white-50 icon"><i class="fas fa-map-marked-alt"></i></span><span class="text-white text">Route anzeigen</span></a><a class="btn btn-success btn-icon-split"
+                                                    role="button"><span class="text-white-50 icon"><i class="fas fa-check"></i></span><span class="text-white text">Erledigt</span></a><a class="btn btn-danger btn-icon-split" role="button"><span class="text-white-50 icon"><i class="fas fa-trash"></i></span></a></td>
+                                        </tr>
+                                    </tbody>
+                                    <tfoot>
+                                        <tr></tr>
+                                    </tfoot>
+                                </table>
+                            </div>
+                            <div class="row"></div><button class="btn btn-primary" type="button" style="margin: 15px;">Route manuell hinzufügen</button></div>
+                    </div>
+                </div>
+            </div>
+            <footer class="bg-white sticky-footer">
+                <div class="container my-auto">
+                    <div class="text-center my-auto copyright"></div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
+    <script src="assets/js/theme.js"></script>
+</body>
+
+</html>
