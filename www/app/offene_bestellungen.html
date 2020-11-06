@@ -396,16 +396,16 @@
                     <thead>
                       <tr>
                         <th>Bearbeiten</th>
-                        <th>Produktname</th>
+                        <th>Produkt</th>
                         <th>Menge</th>
                         <th>Gewicht</th>
                         <th>Strasse</th>
-                        <th>Hausnummer</th>
+                        <th>Hausnr.</th>
                         <th>Plz</th>
                         <th>Ort</th>
                         <th>Datum</th>
                         <th>Zeit</th>
-                        <th>Auftragsnummer</th>
+                        <th>Auftragsnr.</th>
                         <th>Löschen</th>
                       </tr>
                     </thead>
@@ -578,12 +578,12 @@
                 var ret =
                   "<tr>" +
                   "<td>" +
-                  "<button type='button' " +
-                  "onclick='productDisplay(this);' " +
-                  "class='btn btn-default' " +
-                  "data-id='" + id + "'>" +
-                  "<span class='glyphicon glyphicon-edit' />" +
-                  "</button>" +
+                      "<button type='button' " +
+                           "onclick='productDisplay(this);' " +
+                           "class='btn btn-outline-primary' " +
+                           "data-id='" + id + "'>" +
+                           "<span class='glyphicon glyphicon-edit' />" +
+                     "</button>" +
                   "</td>" +
                   "<td>" + $("#produktname").val() + "</td>" +
                   "<td>" + $("#menge").val() + "</td>" +
@@ -596,12 +596,12 @@
                   "<td>" + $("#lieferzeit").val() + "</td>" +
                   "<td>" + $("#auftragsnummer").val() + "</td>" +
                   "<td>" +
-                  "<button type='button' " +
-                  "onclick='productDelete(this);' " +
-                  "class='btn btn-default' " +
-                  "data-id='" + id + "'>" +
-                  "<span class='glyphicon glyphicon-remove' />" +
-                  "</button>" +
+                     "<button type='button' " +
+                              "onclick='productDelete(this);' " +
+                              "class='btn btn-outline-primary' " +
+                              "data-id='" + id + "'>" +
+                              "<span class='glyphicon glyphicon-remove' />"  +
+                      "</button>" +
                   "</td>" +
                   "</tr>"
           
