@@ -11252,7 +11252,3 @@ body.sidebar-toggled footer.sticky-footer {
 .glyphicon-remove:before {
   content: "\e014";
 }
-
-.glyphicon-ok:before {
-  content: "\e013";
-}

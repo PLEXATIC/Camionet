@@ -407,7 +407,6 @@
                         <th>Zeit</th>
                         <th>Auftragsnr.</th>
                         <th>Löschen</th>
-                        <th>Erledigt</th>                        
                       </tr>
                     </thead>
                   </table>
@@ -604,13 +603,6 @@
                               "<span class='glyphicon glyphicon-remove' />"  +
                       "</button>" +
                   "</td>" +
-                     "<button type='button' " +
-                              "onclick='productUpdate(orderCompleted);' " +
-                              "class='btn btn-outline-primary' " +
-                              "data-id='" + id + "'>" +
-                              "<span class='glyphicon glyphicon-ok' />"  +
-                      "</button>" +
-                  "</td>" +
                   "</tr>"
           
                 return ret;
@@ -620,34 +612,7 @@
               function productDelete(ctl) {
                 $(ctl).parents("tr").remove();
               }
-
-
-              //Button auslöser Produkt an weitere Tabelle senden
-                      <button type="button" id="updateButton" class="btn btn-primary" onclick="productUpdate(orderCompleted);">
-                        Hinzufügen
-                      </button>
-                                    // Add product to <table>
-              function productAddToTable() {
-                // First check if a <tbody> tag exists, add one if not
-                if ($("#productTable tbody").length == 0) {
-                  $("#productTable").append("<tbody></tbody>");
-                }
-          
-                // Append product to table
-                $("#productTable tbody").append(
-                  productBuildTableRow(nextId));
-          
-                // Increment next ID to use
-                nextId += 1;
-              }
-          
-              // Update product in <table>
-              function productUpdateInTable(id) {
-                // Find Product in <table>
-                var row = $("#productTable button[data-id='" + id + "']")
-                  .parents("tr")[0];
-
-
+              
               // Clear form fields
               function formClear() {
                 $("#produktname").val("");
@@ -664,147 +629,9 @@
             </script>
         </div>
         </div>    
-
-
-      <!-- abgeschlossene Bestellungen Tabelle -->
-      <div class="d-sm-flex align-items-center justify-content-between mb-4">
-        <h1 class="h3 mb-0 text-gray-800">abgeschlossene Bestellungen</h1>
-        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
-      </div>
-
-      <!-- Content Row -->
-      <div class="row">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-6">
-              <h2>erledigte Aufträge</h2>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-sm-6">
-              <table id="orderCompleted" class="table table-bordered table-condensed table-striped">
-                <thead>
-                  <tr>
-                    <th>Bearbeiten</th>
-                    <th>Produkt</th>
-                    <th>Menge</th>
-                    <th>Gewicht</th>
-                    <th>Strasse</th>
-                    <th>Hausnr.</th>
-                    <th>Plz</th>
-                    <th>Ort</th>
-                    <th>Datum</th>
-                    <th>Zeit</th>
-                    <th>Auftragsnr.</th>
-                    <th>Löschen</th>
-                  </tr>
-                </thead>
-              </table>
-            </div>
-          </div>
-                    
-        <script>
-          // Next id for adding a new Product
-          var nextId = 1;
-          // ID of Product currently editing
-          var activeId = 0;
-      
-          function productDisplay(ctl) {
-            var row = $(ctl).parents("tr");
-            var cols = row.children("td");
-      
-            activeId = $($(cols[0]).children("button")[0]).data("id");
-            $("#produktname").val($(cols[1]).text());
-            $("#menge").val($(cols[2]).text());
-            $("#gewicht").val($(cols[3]).text());
-            $("#strasse").val($(cols[4]).text());
-            $("#hausnummer").val($(cols[5]).text());
-            $("#plz").val($(cols[6]).text());
-            $("#ort").val($(cols[7]).text());
-            $("#lieferdatum").val($(cols[8]).text());
-            $("#lieferzeit").val($(cols[9]).text());
-            $("#auftragsnummer").val($(cols[10]).text());
-      
-            // Change Update Button Text
-            $("#updateButton").text("Hinzufügen");
-          }
-      
-          function productUpdate() {
-            if ($("#updateButton").text() == "Hinzufügen") {
-              productUpdateInTable(activeId);
-            }
-            else {
-              productAddToTable();
-            }
-      
-            // Clear form fields
-            formClear();
-      
-            // Focus to product name field
-            $("#produktname").focus();
-          }
-      
-          // Add product to <table>
-          function productAddToTable() {
-            // First check if a <tbody> tag exists, add one if not
-            if ($("#productTable tbody").length == 0) {
-              $("#productTable").append("<tbody></tbody>");
-            }
-      
-            // Append product to table
-            $("#productTable tbody").append(
-              productBuildTableRow(nextId));
-      
-            // Increment next ID to use
-            nextId += 1;
-          }
-      
-          // Update product in <table>
-          function productUpdateInTable(id) {
-            // Find Product in <table>
-            var row = $("#productTable button[data-id='" + id + "']")
-              .parents("tr")[0];
-      
-            // Add changed product to table
-            $(row).after(productBuildTableRow(id));
-            // Remove original product
-            $(row).remove();
-      
-            // Clear form fields
-            formClear();
-      
-            // Change Update Button Text
-            $("#updateButton").text("Hinzufügen");
-          }
-      
-          // Build a <table> row of Product data
-          function productBuildTableRow(id) {
-            var ret =
-              "<tr>" +
-              "<td>" +
-              "<td>" + $("#produktname").val() + "</td>" +
-              "<td>" + $("#menge").val() + "</td>" +
-              "<td>" + $("#gewicht").val() + "</td>" +
-              "<td>" + $("#strasse").val() + "</td>" +
-              "<td>" + $("#hausnummer").val() + "</td>" +
-              "<td>" + $("#plz").val() + "</td>" +
-              "<td>" + $("#ort").val() + "</td>" +
-              "<td>" + $("#lieferdatum").val() + "</td>" +
-              "<td>" + $("#lieferzeit").val() + "</td>" +
-              "<td>" + $("#auftragsnummer").val() + "</td>" +
-              "</td>" +
-              "</tr>"
-      
-            return ret;
-          }
-
-        </script>
-    </div>
-    </div>    
-      <!-- abgeschlossene Bestellungen End -->
-
-
       <!-- End of Main Content -->
+
+
       <!-- Footer -->
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
