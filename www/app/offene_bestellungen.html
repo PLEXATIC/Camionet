@@ -605,7 +605,7 @@
                       "</button>" +
                   "</td>" +
                      "<button type='button' " +
-                              "onclick='productUpdate();' " +
+                              "onclick='productUpdate(orderCompleted);' " +
                               "class='btn btn-outline-primary' " +
                               "data-id='" + id + "'>" +
                               "<span class='glyphicon glyphicon-ok' />"  +
@@ -620,10 +620,10 @@
               function productDelete(ctl) {
                 $(ctl).parents("tr").remove();
               }
-              
-              //Neuer Code Reto
+
+
               //Button auslöser Produkt an weitere Tabelle senden
-                      <button type="button" id="updateButton" class="btn btn-primary" onclick="productUpdate();">
+                      <button type="button" id="updateButton" class="btn btn-primary" onclick="productUpdate(orderCompleted);">
                         Hinzufügen
                       </button>
                                     // Add product to <table>
@@ -632,7 +632,7 @@
                 if ($("#productTable tbody").length == 0) {
                   $("#productTable").append("<tbody></tbody>");
                 }
-                
+          
                 // Append product to table
                 $("#productTable tbody").append(
                   productBuildTableRow(nextId));
@@ -646,7 +646,6 @@
                 // Find Product in <table>
                 var row = $("#productTable button[data-id='" + id + "']")
                   .parents("tr")[0];
-                //Neuer Code Reto Ende
 
 
               // Clear form fields
