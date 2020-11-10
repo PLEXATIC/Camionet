@@ -1,23 +1,36 @@
 <html>
     <head>
+        
         <title>Sum nicer dicer layout testing</title>
     </head>
 
     <body>
         <style>
             #half-full{
-                width:50%;
+                width:100%;
                 height: 100%;
             }
 
         </style>
 
         <div id="left_side" class="half-full" style="float:left" >
-            <iframe style="width: 100%; height:100%; border: solid 1px black" src="/site_a.html">
+            <iframe id="frameA" style="width: 100%; height:100%; border: solid 1px black" src="site_a.html" width="100%" height="100%">
+            </iframe>
+        </div>
+        <div id="right_side" class="half-full" style="float:right">
+            <iframe style="width: 100%; height:100%; border: solid 1px black" src="site_b.html" width="100%" height="100%">
             </iframe>
         </div>
 
-        <div id="right_side" class="half-full" style="float:right"></div>
+        <script>
+            function updateIframe(){
+                iframe = document.getElementById("frameA");
+                console.log(iframe)
+                iframe.src = "site_b.html"
+            }
+        </script>
+
+        <button onclick="updateIframe()">Outside of the iFrames</button>
 
     </body>
 
