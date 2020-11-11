@@ -27,10 +27,12 @@
   <!-- Page Wrapper -->
   <div id="wrapper">
 
+    
+
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="frame"
+      <a class="sidebar-brand d-flex align-items-center justify-content-center"
         onclick="updateIframeDashboard">
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-shipping-fast"></i>
@@ -43,7 +45,7 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" href="frame" onclick="updateIframeDashboard">
+        <a class="nav-link" onclick="updateIframeDashboard">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
       </li>
@@ -66,8 +68,8 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Bestellungen:</h6>
-            <a class="collapse-item" href="frame" onclick="updateIframeBestellungen_offen">Offene Bestellungen</a>
-            <a class="collapse-item" href="frame" onclick="updateIframeBestellungenVerarbeitet">Verarbeite
+            <a class="collapse-item" onclick="updateIframeBestellungen_offen()">Offene Bestellungen</a>
+            <a class="collapse-item" onclick="updateIframeBestellungenVerarbeitet()">Verarbeite
               Bestellungen</a>
           </div>
         </div>
@@ -83,9 +85,9 @@
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Lieferungen:</h6>
-            <a class="collapse-item" href="frame" onclick="updateIframeLieferungenLive">Live Lieferungen</a>
-            <a class="collapse-item" href="frame" onclick="updateIframeLieferungenOffen">Offene Lieferungen</a>
-            <a class="collapse-item" href="frame" onclick="updateIframeLieferungenVerarbeitet">Verarbeitete Lieferungen</a>
+            <a class="collapse-item"  onclick="updateIframeLieferungenLive()">Live Lieferungen</a>
+            <a class="collapse-item"  onclick="updateIframeLieferungenOffen()">Offene Lieferungen</a>
+            <a class="collapse-item"  onclick="updateIframeLieferungenVerarbeitet()">Verarbeitete Lieferungen</a>
           </div>
         </div>
       </li>
@@ -104,8 +106,8 @@
         <div id="collapseFZ" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Fahrzeugübersicht:</h6>
-            <a class="collapse-item" href="frame" onclick="updateIframeFahrzeugeLager">Lager</a>
-            <a class="collapse-item" href="frame" onclick="updateIframeFahrzeugeUnterwegs">Unterwegs</a>
+            <a class="collapse-item"  onclick="updateIframeFahrzeugeLager()">Lager</a>
+            <a class="collapse-item"  onclick="updateIframeFahrzeugeUnterwegs()">Unterwegs</a>
           </div>
         </div>
       </li>
@@ -195,7 +197,7 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="frame">
+        <a class="nav-link" onclick="updateIframeSoftDrinks()">
           <i class="fas fa-glass-whiskey"></i>
           <span>Softgetränke</span></a>
       </li>
@@ -421,7 +423,7 @@
 
         <!-- Begin Page Content -->
         <div class="container-fluid" style="height: 100%; padding:0px; margin: 0px;">
-          <iframe id="frame" src="app-dashboard.html" width="99%" height="100%"
+          <iframe id="i_frame" src="app-dashboard.html" width="99%" height="100%"
             style="height: 100%; padding:0px; margin:0px;"></iframe>
 
 
@@ -548,6 +550,52 @@
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
+
+    <script>
+
+      function updateiFrame(url){
+        fram = document.getElementById("i_frame");
+        fram.src = url;
+      }
+
+
+      function updateIframeDashboard(){
+        updateiFrame("app-dashboard.html");
+      }
+
+      function updateIframeBestellungenVerarbeitet(){
+        updateiFrame("bestellungen_verarbeitet.html");
+      }
+
+      function updateIframeBestellungen_offen(){
+        updateiFrame("bestellungen_offen.html");
+      }
+
+      function updateIframeFahrzeugeLager(){
+        updateiFrame("fahrzeuge_lager.html");
+      }
+
+      function updateIframeFahrzeugeUnterwegs(){
+        updateiFrame("fahrzeuge_unterwegs.html");
+      }
+
+      function updateIframeLieferungenLive(){
+        updateiFrame("lieferungen_live.html")
+      }
+
+      function updateIframeLieferungenOffen(){
+        updateiFrame("lieferungen_offen.html");
+      }
+
+      function updateIframeLieferungenVerarbeitet(){
+        updateiFrame("lieferungen_verarbeitet.html");
+      }
+
+      function updateIframeSoftDrinks(){
+        updateiFrame("softdrinks.html");
+      }
+
+    </script>
 
 </body>
 
