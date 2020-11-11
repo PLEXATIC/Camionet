@@ -68,7 +68,7 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Bestellungen:</h6>
-            <a class="collapse-item" onclick="updateIframeBestellungen_offen()">Offene Bestellungen</a>
+            <a class="collapse-item" onclick="updateIframeBestellungenOffen()">Offene Bestellungen</a>
             <a class="collapse-item" onclick="updateIframeBestellungenVerarbeitet()">Verarbeite
               Bestellungen</a>
           </div>
@@ -423,79 +423,8 @@
 
         <!-- Begin Page Content -->
         <div class="container-fluid" style="height: 100%; padding:0px; margin: 0px;">
-          <iframe id="i_frame" src="app-dashboard.html" width="99%" height="100%"
+          <iframe id="i_frame" src="app-dashboard.html" width="99%" height="100%" frameBorder="0"
             style="height: 100%; padding:0px; margin:0px;"></iframe>
-
-
-
-          <script>
-            function updateIframeDashboard() {
-              iframe = document.getElementById("frame");
-              console.log(iframe)
-              iframe.src = "app-dashboard.html"
-            }
-          </script>
-
-          <script>
-            function updateIframeBestellungen_offen() {
-              iframe = document.getElementById("frame");
-              console.log(iframe)
-              iframe.src = "bestellungen_offen.html"
-            }
-          </script>
-
-          <script>
-            function updateIframeBestellungenVerarbeitet() {
-              iframe = document.getElementById("frame");
-              console.log(iframe)
-              iframe.src = "bestellungen_verarbeitet.html"
-            }
-          </script>
-
-          <script>
-            function updateIframeFahrzeugeLager() {
-              iframe = document.getElementById("frame");
-              console.log(iframe)
-              iframe.src = "fahrzeuge_lager.html"
-            }
-          </script>
-
-
-          <script>
-            function updateIframeFahrzeugeUnterwegs() {
-              iframe = document.getElementById("frame");
-              console.log(iframe)
-              iframe.src = "fahrzeuge_unterwegs.html"
-            }
-          </script>
-
-
-          <script>
-            function updateIframeLieferungenLive() {
-              iframe = document.getElementById("frame");
-              console.log(iframe)
-              iframe.src = "lieferungen_live.html"
-            }
-          </script>
-
-
-          <script>
-            function updateIframeLieferungenOffen() {
-              iframe = document.getElementById("frame");
-              console.log(iframe)
-              iframe.src = "lieferungen_offen.html"
-            }
-          </script>
-
-
-          <script>
-            function updateIframeLieferungenVerarbeitet() {
-              iframe = document.getElementById("frame");
-              console.log(iframe)
-              iframe.src = "lieferungen_verarbeitet.html"
-            }
-          </script>
-
 
         </div>
         <!-- End of Main Content -->
@@ -558,7 +487,6 @@
         fram.src = url;
       }
 
-
       function updateIframeDashboard(){
         updateiFrame("app-dashboard.html");
       }
@@ -567,7 +495,7 @@
         updateiFrame("bestellungen_verarbeitet.html");
       }
 
-      function updateIframeBestellungen_offen(){
+      function updateIframeBestellungenOffen(){
         updateiFrame("bestellungen_offen.html");
       }
 
