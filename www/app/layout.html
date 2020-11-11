@@ -9,11 +9,13 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Camionet Produkte - Rotwein</title>
+  <title>Camionet</title>
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
 
   <!-- Custom styles for this template-->
   <link href="css/sb-admin-2.min.css" rel="stylesheet">
@@ -28,7 +30,8 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="frame"
+        onclick="updateIframeDashboard">
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-shipping-fast"></i>
         </div>
@@ -40,7 +43,7 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="frame" onclick="updateIframeDashboard">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
       </li>
@@ -55,53 +58,57 @@
 
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
+          aria-controls="collapseTwo">
           <i class="fas fa-cart-plus"></i>
           <span>Bestellungen</span>
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Bestellungen:</h6>
-            <a class="collapse-item" href="buttons.html">Offene Bestellungen</a>
-            <a class="collapse-item" href="cards.html">Verarbeite Bestellungen</a>
+            <a class="collapse-item" href="frame" onclick="updateIframeBestellungen_offen">Offene Bestellungen</a>
+            <a class="collapse-item" href="frame" onclick="updateIframeBestellungenVerarbeitet">Verarbeite
+              Bestellungen</a>
           </div>
         </div>
       </li>
 
       <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+          aria-expanded="true" aria-controls="collapseUtilities">
           <i class="fas fa-shipping-fast"></i>
           <span>Lieferungen</span>
         </a>
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Lieferungen:</h6>
-            <a class="collapse-item" href="utilities-color.html">Live Lieferungen</a>
-            <a class="collapse-item" href="utilities-border.html">Offene Lieferungen</a>
-            <a class="collapse-item" href="utilities-animation.html">Verarbeitete Lieferungen</a>
+            <a class="collapse-item" href="frame" onclick="updateIframeLieferungenLive">Live Lieferungen</a>
+            <a class="collapse-item" href="frame" onclick="updateIframeLieferungenOffen">Offene Lieferungen</a>
+            <a class="collapse-item" href="frame" onclick="updateIframeLieferungenVerarbeitet">Verarbeitete Lieferungen</a>
           </div>
         </div>
       </li>
 
 
-<!-- Divider -->
-<hr class="sidebar-divider">
+      <!-- Divider -->
+      <hr class="sidebar-divider">
 
-<!-- Fahrzeugübersicht -->
-<li class="nav-item">
-  <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFZ" aria-expanded="true" aria-controls="collapseFZ">
-    <i class="fas fa-truck"></i>
-    <span>Fahrzeugübersicht</span>
-  </a>
-  <div id="collapseFZ" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-    <div class="bg-white py-2 collapse-inner rounded">
-      <h6 class="collapse-header">Fahrzeugübersicht:</h6>
-      <a class="collapse-item" href="utilities-color.html">Lager</a>
-      <a class="collapse-item" href="utilities-border.html">Unterwegs</a>
-    </div>
-  </div>
-</li>
+      <!-- Fahrzeugübersicht -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseFZ" aria-expanded="true"
+          aria-controls="collapseFZ">
+          <i class="fas fa-truck"></i>
+          <span>Fahrzeugübersicht</span>
+        </a>
+        <div id="collapseFZ" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+          <div class="bg-white py-2 collapse-inner rounded">
+            <h6 class="collapse-header">Fahrzeugübersicht:</h6>
+            <a class="collapse-item" href="frame" onclick="updateIframeFahrzeugeLager">Lager</a>
+            <a class="collapse-item" href="frame" onclick="updateIframeFahrzeugeUnterwegs">Unterwegs</a>
+          </div>
+        </div>
+      </li>
 
       <!-- Divider -->
       <hr class="sidebar-divider">
@@ -113,7 +120,8 @@
 
       <!-- Produktkategorien -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSpirits" aria-expanded="true" aria-controls="collapseSpirits">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseSpirits"
+          aria-expanded="true" aria-controls="collapseSpirits">
           <i class="fas fa-glass-martini-alt"></i>
           <span>Spirituosen</span>
         </a>
@@ -142,7 +150,8 @@
 
       <!-- Nav Item - Charts -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBeer" aria-expanded="true" aria-controls="collapseBeer">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBeer" aria-expanded="true"
+          aria-controls="collapseBeer">
           <i class="fas fa-glass-martini-alt"></i>
           <span>Bier</span>
         </a>
@@ -159,7 +168,8 @@
 
       <!-- Nav Item - Tables -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseWine" aria-expanded="true" aria-controls="collapseWine">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseWine" aria-expanded="true"
+          aria-controls="collapseWine">
           <i class="fas fa-glass-martini-alt"></i>
           <span>Wein</span>
         </a>
@@ -185,7 +195,7 @@
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="tables.html">
+        <a class="nav-link" href="frame">
           <i class="fas fa-glass-whiskey"></i>
           <span>Softgetränke</span></a>
       </li>
@@ -209,11 +219,12 @@
 
         <!-- Topbar -->
         <style>
-            .myCoolClass{
-                margin-bottom: 0px!important
-            }
+          .myCoolClass {
+            margin-bottom: 0px !important
+          }
         </style>
-        <nav class="myCoolClass navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow" style="margin-bottom:0px">
+        <nav class="myCoolClass navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow"
+          style="margin-bottom:0px">
 
           <!-- Sidebar Toggle (Topbar) -->
           <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -223,7 +234,8 @@
           <!-- Topbar Search -->
           <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
             <div class="input-group">
-              <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+              <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                aria-label="Search" aria-describedby="basic-addon2">
               <div class="input-group-append">
                 <button class="btn btn-primary" type="button">
                   <i class="fas fa-search fa-sm"></i>
@@ -237,14 +249,17 @@
 
             <!-- Nav Item - Search Dropdown (Visible Only XS) -->
             <li class="nav-item dropdown no-arrow d-sm-none">
-              <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-search fa-fw"></i>
               </a>
               <!-- Dropdown - Messages -->
-              <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in" aria-labelledby="searchDropdown">
+              <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                aria-labelledby="searchDropdown">
                 <form class="form-inline mr-auto w-100 navbar-search">
                   <div class="input-group">
-                    <input type="text" class="form-control bg-light border-0 small" placeholder="Produkt suchen..." aria-label="Search" aria-describedby="basic-addon2">
+                    <input type="text" class="form-control bg-light border-0 small" placeholder="Produkt suchen..."
+                      aria-label="Search" aria-describedby="basic-addon2">
                     <div class="input-group-append">
                       <button class="btn btn-primary" type="button">
                         <i class="fas fa-search fa-sm"></i>
@@ -257,13 +272,15 @@
 
             <!-- Nav Item - Alerts -->
             <li class="nav-item dropdown no-arrow mx-1">
-              <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-bell fa-fw"></i>
                 <!-- Counter - Alerts -->
                 <span class="badge badge-danger badge-counter">3+</span>
               </a>
               <!-- Dropdown - Alerts -->
-              <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="alertsDropdown">
+              <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                aria-labelledby="alertsDropdown">
                 <h6 class="dropdown-header">
                   Alerts Center
                 </h6>
@@ -306,13 +323,15 @@
 
             <!-- Nav Item - Messages -->
             <li class="nav-item dropdown no-arrow mx-1">
-              <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-envelope fa-fw"></i>
                 <!-- Counter - Messages -->
                 <span class="badge badge-danger badge-counter">7</span>
               </a>
               <!-- Dropdown - Messages -->
-              <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="messagesDropdown">
+              <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                aria-labelledby="messagesDropdown">
                 <h6 class="dropdown-header">
                   Message Center
                 </h6>
@@ -322,7 +341,8 @@
                     <div class="status-indicator bg-success"></div>
                   </div>
                   <div class="font-weight-bold">
-                    <div class="text-truncate">Hi there! I am wondering if you can help me with a problem I've been having.</div>
+                    <div class="text-truncate">Hi there! I am wondering if you can help me with a problem I've been
+                      having.</div>
                     <div class="small text-gray-500">Emily Fowler · 58m</div>
                   </div>
                 </a>
@@ -332,7 +352,8 @@
                     <div class="status-indicator"></div>
                   </div>
                   <div>
-                    <div class="text-truncate">I have the photos that you ordered last month, how would you like them sent to you?</div>
+                    <div class="text-truncate">I have the photos that you ordered last month, how would you like them
+                      sent to you?</div>
                     <div class="small text-gray-500">Jae Chun · 1d</div>
                   </div>
                 </a>
@@ -342,7 +363,8 @@
                     <div class="status-indicator bg-warning"></div>
                   </div>
                   <div>
-                    <div class="text-truncate">Last month's report looks great, I am very happy with the progress so far, keep up the good work!</div>
+                    <div class="text-truncate">Last month's report looks great, I am very happy with the progress so
+                      far, keep up the good work!</div>
                     <div class="small text-gray-500">Morgan Alvarez · 2d</div>
                   </div>
                 </a>
@@ -352,7 +374,8 @@
                     <div class="status-indicator bg-success"></div>
                   </div>
                   <div>
-                    <div class="text-truncate">Am I a good boy? The reason I ask is because someone told me that people say this to all dogs, even if they aren't good...</div>
+                    <div class="text-truncate">Am I a good boy? The reason I ask is because someone told me that people
+                      say this to all dogs, even if they aren't good...</div>
                     <div class="small text-gray-500">Chicken the Dog · 2w</div>
                   </div>
                 </a>
@@ -364,7 +387,8 @@
 
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
-              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
                 <span class="mr-2 d-none d-lg-inline text-gray-600 small">Valerie Luna</span>
                 <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
               </a>
@@ -397,59 +421,133 @@
 
         <!-- Begin Page Content -->
         <div class="container-fluid" style="height: 100%; padding:0px; margin: 0px;">
-            <iframe src="app-rotweine.html" width="99%" height="100%" style="height: 100%; padding:0px; margin:0px;"></iframe>
-      </div>
-      <!-- End of Main Content -->
+          <iframe id="frame" src="app-dashboard.html" width="99%" height="100%"
+            style="height: 100%; padding:0px; margin:0px;"></iframe>
 
-      <!-- Footer -->
-      <footer class="sticky-footer bg-white">
-        <div class="container my-auto">
-          <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Your Website 2020</span>
+
+
+          <script>
+            function updateIframeDashboard() {
+              iframe = document.getElementById("frame");
+              console.log(iframe)
+              iframe.src = "app-dashboard.html"
+            }
+          </script>
+
+          <script>
+            function updateIframeBestellungen_offen() {
+              iframe = document.getElementById("frame");
+              console.log(iframe)
+              iframe.src = "bestellungen_offen.html"
+            }
+          </script>
+
+          <script>
+            function updateIframeBestellungenVerarbeitet() {
+              iframe = document.getElementById("frame");
+              console.log(iframe)
+              iframe.src = "bestellungen_verarbeitet.html"
+            }
+          </script>
+
+          <script>
+            function updateIframeFahrzeugeLager() {
+              iframe = document.getElementById("frame");
+              console.log(iframe)
+              iframe.src = "fahrzeuge_lager.html"
+            }
+          </script>
+
+
+          <script>
+            function updateIframeFahrzeugeUnterwegs() {
+              iframe = document.getElementById("frame");
+              console.log(iframe)
+              iframe.src = "fahrzeuge_unterwegs.html"
+            }
+          </script>
+
+
+          <script>
+            function updateIframeLieferungenLive() {
+              iframe = document.getElementById("frame");
+              console.log(iframe)
+              iframe.src = "lieferungen_live.html"
+            }
+          </script>
+
+
+          <script>
+            function updateIframeLieferungenOffen() {
+              iframe = document.getElementById("frame");
+              console.log(iframe)
+              iframe.src = "lieferungen_offen.html"
+            }
+          </script>
+
+
+          <script>
+            function updateIframeLieferungenVerarbeitet() {
+              iframe = document.getElementById("frame");
+              console.log(iframe)
+              iframe.src = "lieferungen_verarbeitet.html"
+            }
+          </script>
+
+
+        </div>
+        <!-- End of Main Content -->
+
+        <!-- Footer -->
+        <footer class="sticky-footer bg-white">
+          <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+              <span>Copyright &copy; Your Website 2020</span>
+            </div>
+          </div>
+        </footer>
+        <!-- End of Footer -->
+
+      </div>
+      <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+            <a class="btn btn-primary" href="login.html">Logout</a>
           </div>
         </div>
-      </footer>
-      <!-- End of Footer -->
-
-    </div>
-    <!-- End of Content Wrapper -->
-
-  </div>
-  <!-- End of Page Wrapper -->
-
-  <!-- Scroll to Top Button-->
-  <a class="scroll-to-top rounded" href="#page-top">
-    <i class="fas fa-angle-up"></i>
-  </a>
-
-  <!-- Logout Modal-->
-  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">×</span>
-          </button>
-        </div>
-        <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-        <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="login.html">Logout</a>
-        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Bootstrap core JavaScript-->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-  <!-- Core plugin JavaScript-->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
-  <!-- Custom scripts for all pages-->
-  <script src="js/sb-admin-2.min.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
 
 </body>
 
