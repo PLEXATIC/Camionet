@@ -27,13 +27,12 @@
   <!-- Page Wrapper -->
   <div id="wrapper">
 
-    
+
 
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center"
-        onclick="updateIframeDashboard">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" onclick="updateIframeDashboard">
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-shipping-fast"></i>
         </div>
@@ -85,9 +84,9 @@
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Lieferungen:</h6>
-            <a class="collapse-item"  onclick="updateIframeLieferungenLive()">Live Lieferungen</a>
-            <a class="collapse-item"  onclick="updateIframeLieferungenOffen()">Offene Lieferungen</a>
-            <a class="collapse-item"  onclick="updateIframeLieferungenVerarbeitet()">Verarbeitete Lieferungen</a>
+            <a class="collapse-item" onclick="updateIframeLieferungenLive()">Live Lieferungen</a>
+            <a class="collapse-item" onclick="updateIframeLieferungenOffen()">Offene Lieferungen</a>
+            <a class="collapse-item" onclick="updateIframeLieferungenVerarbeitet()">Verarbeitete Lieferungen</a>
           </div>
         </div>
       </li>
@@ -106,8 +105,8 @@
         <div id="collapseFZ" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Fahrzeugübersicht:</h6>
-            <a class="collapse-item"  onclick="updateIframeFahrzeugeLager()">Lager</a>
-            <a class="collapse-item"  onclick="updateIframeFahrzeugeUnterwegs()">Unterwegs</a>
+            <a class="collapse-item" onclick="updateIframeFahrzeugeLager()">Lager</a>
+            <a class="collapse-item" onclick="updateIframeFahrzeugeUnterwegs()">Unterwegs</a>
           </div>
         </div>
       </li>
@@ -135,9 +134,9 @@
             <a class="collapse-item" href="#">Single Malt Whisky</a>
             <a class="collapse-item" href="#">Grain Whisky</a>
             <h6 class="collapse-header">Gin:</h6>
-            <a class="collapse-item" href="404.html">Dry Gin</a>
-            <a class="collapse-item" href="blank.html">London Gin</a>
-            <a class="collapse-item" href="blank.html">Destillierter Gin</a>
+            <a class="collapse-item" href="#">Dry Gin</a>
+            <a class="collapse-item" href="#">London Gin</a>
+            <a class="collapse-item" href="#">Destillierter Gin</a>
             <h6 class="collapse-header">Vodka:</h6>
             <a class="collapse-item" href="#">Vodka</a>
             <h6 class="collapse-header">Rum:</h6>
@@ -178,7 +177,7 @@
         <div id="collapseWine" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Rotweine:</h6>
-            <a class="collapse-item" href="#">Frankreich</a>
+            <a class="collapse-item" onclick="updateIframeRotweineFranzoesisch()">Frankreich</a>
             <a class="collapse-item" href="#">Spanien</a>
             <a class="collapse-item" href="#">Italien</a>
             <a class="collapse-item" href="#">Schweiz</a>
@@ -482,45 +481,49 @@
 
     <script>
 
-      function updateiFrame(url){
+      function updateiFrame(url) {
         fram = document.getElementById("i_frame");
         fram.src = url;
       }
 
-      function updateIframeDashboard(){
+      function updateIframeDashboard() {
         updateiFrame("app-dashboard.html");
       }
 
-      function updateIframeBestellungenVerarbeitet(){
+      function updateIframeBestellungenVerarbeitet() {
         updateiFrame("bestellungen_verarbeitet.html");
       }
 
-      function updateIframeBestellungenOffen(){
+      function updateIframeBestellungenOffen() {
         updateiFrame("bestellungen_offen.html");
       }
 
-      function updateIframeFahrzeugeLager(){
+      function updateIframeFahrzeugeLager() {
         updateiFrame("fahrzeuge_lager.html");
       }
 
-      function updateIframeFahrzeugeUnterwegs(){
+      function updateIframeFahrzeugeUnterwegs() {
         updateiFrame("fahrzeuge_unterwegs.html");
       }
 
-      function updateIframeLieferungenLive(){
+      function updateIframeLieferungenLive() {
         updateiFrame("lieferungen_live.html")
       }
 
-      function updateIframeLieferungenOffen(){
+      function updateIframeLieferungenOffen() {
         updateiFrame("lieferungen_offen.html");
       }
 
-      function updateIframeLieferungenVerarbeitet(){
+      function updateIframeLieferungenVerarbeitet() {
         updateiFrame("lieferungen_verarbeitet.html");
       }
 
-      function updateIframeSoftDrinks(){
+      function updateIframeSoftDrinks() {
         updateiFrame("softdrinks.html");
+      }
+
+      function updateIframeRotweineFranzoesisch() {
+        updateiFrame("rotweine-franzoesisch.html");
       }
 
     </script>
