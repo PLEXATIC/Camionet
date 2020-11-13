@@ -583,6 +583,7 @@ pre code {
   padding-left: 0.75rem;
   margin-right: auto;
   margin-left: auto;
+  border: none;
 }
 
 @media (min-width: 576px) {
@@ -11220,4 +11221,43 @@ footer.sticky-footer .copyright {
 
 body.sidebar-toggled footer.sticky-footer {
   width: 100%;
+}
+
+@font-face {
+  font-family: 'Glyphicons Halflings';
+
+  src: url('../exported/assets/fonts/glyphicons-halflings-regular.eot');
+  src: url('../exported/assets/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../exported/assets/fonts/glyphicons-halflings-regular.woff') format('woff'), url('../exported/assets/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../exported/assets/fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+.glyphicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.glyphicon-trash:before {
+  content: "\e020";
+}
+
+.glyphicon-edit:before {
+  content: "\e065";
+}
+
+.glyphicon-remove:before {
+  content: "\e014";
+}
+
+.glyphicon-ok:before {
+  content: "\e013";
+}
+
+.glyphicon-send:before {
+  content: "\e171";
 }
