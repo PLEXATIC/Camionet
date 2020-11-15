@@ -128,41 +128,9 @@
         </a>
         <div id="collapseSpirits" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Whisky:</h6>
-            <a class="collapse-item" href="#">Scotch Whisky</a>
-            <a class="collapse-item" href="#">Blended Whisky</a>
-            <a class="collapse-item" href="#">Single Malt Whisky</a>
-            <a class="collapse-item" href="#">Grain Whisky</a>
-            <h6 class="collapse-header">Gin:</h6>
-            <a class="collapse-item" href="#">Dry Gin</a>
-            <a class="collapse-item" href="#">London Gin</a>
-            <a class="collapse-item" href="#">Destillierter Gin</a>
-            <h6 class="collapse-header">Vodka:</h6>
-            <a class="collapse-item" href="#">Vodka</a>
-            <h6 class="collapse-header">Rum:</h6>
-            <a class="collapse-item" href="#">Kuba</a>
-            <a class="collapse-item" href="#">Dominikanische Republik</a>
-            <h6 class="collapse-header">Likör:</h6>
-            <a class="collapse-item" href="#">Ingwerer</a>
-            <a class="collapse-item" href="#">Francelico</a>
-          </div>
-        </div>
-      </li>
-
-      <!-- Nav Item - Charts -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseBeer" aria-expanded="true"
-          aria-controls="collapseBeer">
-          <i class="fas fa-glass-martini-alt"></i>
-          <span>Bier</span>
-        </a>
-        <div id="collapseBeer" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Bier:</h6>
-            <a class="collapse-item" href="#">Amber</a>
-            <a class="collapse-item" href="#">IPA</a>
-            <a class="collapse-item" href="#">Pale ALe</a>
-            <a class="collapse-item" href="#">Alkoholfrei</a>
+            <a class="collapse-item" onclick="updateIFrameWhisky()">Whisky</a>
+            <a class="collapse-item" onclick="updateIFrameGin()">Gin</a>
+            <a class="collapse-item" onclick="updateIFrameVodka()">Vodka</a>
           </div>
         </div>
       </li>
@@ -176,21 +144,8 @@
         </a>
         <div id="collapseWine" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Rotweine:</h6>
-            <a class="collapse-item" onclick="updateIframeRotweineFranzoesisch()">Frankreich</a>
-            <a class="collapse-item" href="#">Spanien</a>
-            <a class="collapse-item" href="#">Italien</a>
-            <a class="collapse-item" href="#">Schweiz</a>
-            <h6 class="collapse-header">Weissweine:</h6>
-            <a class="collapse-item" href="#">Frankreich</a>
-            <a class="collapse-item" href="#">Spanien</a>
-            <a class="collapse-item" href="#">Italien</a>
-            <a class="collapse-item" href="#">Schweiz</a>
-            <h6 class="collapse-header">Schaumweine:</h6>
-            <a class="collapse-item" href="#">Frankreich</a>
-            <a class="collapse-item" href="#">Spanien</a>
-            <a class="collapse-item" href="#">Italien</a>
-            <a class="collapse-item" href="#">Schweiz</a>
+            <a class="collapse-item" onclick="updateIframeRotweineFranzoesisch()">Rotwein</a>
+            <a class="collapse-item" onclick="updateIframeRotweineFranzoesisch()">Weisswein</a>
           </div>
         </div>
       </li>
@@ -516,6 +471,18 @@
 
       function updateIframeLieferungenVerarbeitet() {
         updateiFrame("lieferungen_verarbeitet.html");
+      }
+
+      function updateIFrameWhisky() {
+        updateiFrame("whisky.html")
+      }
+
+      function updateIFrameGin() {
+        updateiFrame("gin.html")
+      }
+
+      function updateIFrameVodka() {
+        updateiFrame("vodka.html")
       }
 
       function updateIframeSoftDrinks() {
