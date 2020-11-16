@@ -40,32 +40,52 @@
                   <div class="form-row">
                       <div class="col-12 col-md-6" id="message">
                           <h2 class="h4"><i class="fa fa-envelope"></i> Neue Lieferung<small></small></h2>
-                          <div class="form-group"><label for="from-name">Auftragsnummer</label>
+                          <div class="form-group"><label for="from-name">Auftragdetails</label>
                               <div class="input-group">
                                   <div class="input-group-prepend"></div>
                               </div>
-                          </div><input class="form-control" type="text" style="width: min-content;" placeholder="Nummer">
-                          <div class="form-group" style="margin-top: 2rem;"><label for="from-email">Lieferadresse</label>
-                            <input class="form-control" type="text" style="margin: 0px;margin-top: 5px;margin-bottom: 5px; width: min-content;" placeholder="Name">
-                            <input class="form-control" type="text" style="margin-top: 5px;margin-bottom: 5px; width: min-content;" placeholder="Strasse">
-                            <input class="form-control" type="text" style="margin-top: 5px;margin-bottom: 5px; width: min-content;" placeholder="PLZ">
-                            <input class="form-control" type="text" style="margin-top: 5px;margin-bottom: 5px; width: min-content;" placeholder="Ort">
-                            <input class="form-control" type="text" style="margin-top: 5px;margin-bottom: 5px; width: min-content;" placeholder="Land">
+                          </div>
+                          <input class="form-control" type="text" style="margin: 0px; width: min-content; float: left;" placeholder="Referenznummer">
+                          <input class="form-control" type="text" style="margin-left: 5px; width: min-content; float: left;" placeholder="Fahrer">
+                          <input class="form-control" type="text" style="margin-left: 5px; 2rem; width: min-content; float: left;" placeholder="Fahrzeug">
+                          <div class="form-group">
+                            <h5 style="margin-top: 5rem;">Lieferadresse</h5>
+                            <input class="form-control" type="text" style="margin: 0px; width: min-content; float: left;" placeholder="Name">
+                            <input class="form-control" type="text" style="margin-left: 5px; width: min-content; float: left;" placeholder="Vorname">
+                            <input class="form-control" type="text" style="margin-left: 5px; 2rem; width: min-content; float: left;" placeholder="Strasse">
+                            <input class="form-control" type="text" style="margin: 0px; margin-top: 2rem; width: min-content; float: left;" placeholder="PLZ">
+                            <input class="form-control" type="text" style="margin-left: 5px; margin-top: 2rem; width: min-content; float: left;" placeholder="Ort">
+                            <input class="form-control" type="text" style="margin-left: 5px; margin-top: 2rem; width: min-content; float: left;" placeholder="Land">
                                   <div class="input-group">
                                       <div class="input-group-prepend"></div>
                                   </div>
                           </div>
                           <div class="form-row">
                               <div class="col-12 col-sm-6 col-md-12 col-lg-6">
-                                  <div class="form-group"><label for="from-phone">Telefonnummer</label>
+                                  <div class="form-group" style="margin-top: 1rem;"><label for="from-phone">Telefonnummer</label>
                                       <div class="input-group">
-                                          <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-phone"></i></span></div><input class="form-control" type="text" id="from-phone" name="phone" required="" placeholder="Primary Phone"></div>
+                                          <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-phone"></i></span></div><input class="form-control" type="text" id="from-phone" name="phone" required="" placeholder="Telefon"></div>
                                   </div>
                               </div>
                               <div class="col-12 col-sm-6 col-md-12 col-lg-6">
-                                  <div class="form-group"><label for="from-calltime">Lieferfrist</label>
+                                  <div class="form-group" style="margin-top: 1rem;"><label for="from-calltime">Lieferzeit</label>
                                       <div class="input-group">
-                                          <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-clock-o"></i></span></div><select class="form-control" id="from-calltime" name="call time"><optgroup label="Best Time to Call"><option value="Morning" selected="">Morning</option><option value="Afternoon">Afternoon</option><option value="Evening">Evening</option></optgroup></select></div>
+                                          <div class="input-group-prepend">
+                                              <span class="input-group-text">
+                                                <i class="far fa-clock"></i>
+                                                </span>
+                                            </div>
+                                          <select class="form-control" id="from-calltime" name="call time">
+                                              <optgroup label="Optimale Lieferzeit">
+                                                <option value="option">-</option>
+                                                  <option>07 - 09 Uhr</option>
+                                                  <option>09 - 11 Uhr</option>
+                                                  <option>11 - 13 Uhr</option>
+                                                  <option>13 - 15 Uhr</option>
+                                                  <option>15 - 17 Uhr</option>
+                                                </optgroup>
+                                                </select>
+                                            </div>
                                   </div>
                               </div>
                           </div>
@@ -73,6 +93,7 @@
                           <div class="form-group">
                               <div class="form-row">
                                   <div class="col"><button class="btn btn-primary btn-block" type="reset"><i class="fa fa-undo"></i>Reset</button></div>
+                                  <div class="col"><button class="btn btn-primary btn-block" type="submit">Route berechnen <i class="fa fa-chevron-circle-right"></i></button></div>
                                   <div class="col"><button class="btn btn-primary btn-block" type="submit">Lieferung erteilen <i class="fa fa-chevron-circle-right"></i></button></div>
                               </div>
                           </div>
@@ -83,13 +104,6 @@
                           <div class="form-row">
                               <div class="col-12"><img src="img/Fahrer1.png" style="width: 500px;"></div>
                               <div class="col-sm-6 col-md-12 col-lg-6" style="margin-top: 2rem;">
-                                  <h2 class="h4"><i class="fa fa-user"></i>&nbsp;Fahrer: Julian Geiser</h2>
-                                  <div><span><strong>Name</strong></span></div>
-                                  <div><span>0041791231234</span></div>
-                                  <div class="col"><button class="btn btn-primary btn-block" type="submit">Route Berechnen</i></button></div>
-                                  <hr class="d-sm-none d-md-block d-lg-none">
-                              </div>
-                              <div class="col-sm-6 col-md-12 col-lg-6" style="margin-top: 2rem;">
                                 <h2 class="h4"><i class="fa fa-location-arrow"></i>&nbsp;Nächstes Ziel</h2>
                                 <div><span><strong>KuZeB</strong></span></div>
                                 <div><span>Zürcherstrasse 2</span></div>
@@ -102,150 +116,7 @@
                   </div>
               </form>
           </div>
-          <div class="container-fluid">
-              <h1 style="margin-top: 30px;">Fahrer 2</h1>
-              <hr>
-              <form id="contactForm" action="javascript:void(0);" method="get"><input class="form-control" type="hidden" name="Introduction" value="This email was sent from www.awebsite.com"><input class="form-control" type="hidden" name="subject" value="Awebsite.com Contact Form"><input class="form-control" type="hidden"
-                      name="to" value="email@awebsite.com">
-                  <div class="form-row">
-                      <div class="col-md-6">
-                          <div id="successfail"></div>
-                      </div>
-                  </div>
-                  <div class="form-row">
-                      <div class="col-12 col-md-6" id="message">
-                          <h2 class="h4"><i class="fa fa-envelope"></i> Neue Lieferung zuteilen<small></small></h2>
-                          <div class="form-group"><label for="from-name">Auftragsnummer</label>
-                              <div class="input-group">
-                                  <div class="input-group-prepend"></div>
-                              </div>
-                          </div><input class="form-control" type="text">
-                          <div class="form-group"><label for="from-email">Adresse</label><input class="form-control" type="text" style="margin: 0px;margin-top: 5px;margin-bottom: 5px;"><input class="form-control" type="text" style="margin-top: 5px;margin-bottom: 5px;">
-                              <input
-                                  class="form-control" type="text" style="margin-top: 5px;margin-bottom: 5px;">
-                                  <div class="input-group">
-                                      <div class="input-group-prepend"></div>
-                                  </div>
-                          </div>
-                          <div class="form-row">
-                              <div class="col-12 col-sm-6 col-md-12 col-lg-6">
-                                  <div class="form-group"><label for="from-phone">Telefonnummer</label>
-                                      <div class="input-group">
-                                          <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-phone"></i></span></div><input class="form-control" type="text" id="from-phone" name="phone" required="" placeholder="Primary Phone"></div>
-                                  </div>
-                              </div>
-                              <div class="col-12 col-sm-6 col-md-12 col-lg-6">
-                                  <div class="form-group"><label for="from-calltime">Lieferfrist</label>
-                                      <div class="input-group">
-                                          <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-clock-o"></i></span></div><select class="form-control" id="from-calltime" name="call time"><optgroup label="Best Time to Call"><option value="Morning" selected="">Morning</option><option value="Afternoon">Afternoon</option><option value="Evening">Evening</option></optgroup></select></div>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="form-group"><label for="from-comments">Kommentare</label><textarea class="form-control" id="from-comments" name="comments" placeholder="Enter Comments" rows="5"></textarea></div>
-                          <div class="form-group">
-                              <div class="form-row">
-                                  <div class="col"><button class="btn btn-primary btn-block" type="reset"><i class="fa fa-undo"></i> Reset</button></div>
-                                  <div class="col"><button class="btn btn-primary btn-block" type="submit">Submit <i class="fa fa-chevron-circle-right"></i></button></div>
-                              </div>
-                          </div>
-                          <hr class="d-flex d-md-none">
-                      </div>
-                      <div class="col-12 col-md-6">
-                          <h2 class="h4"><i class="fa fa-location-arrow"></i>&nbsp;Standort</h2>
-                          <div class="form-row">
-                              <div class="col-12"><img src="img/Fahrer2.png" style="width: 500px;"></div>
-                              <div class="col-sm-6 col-md-12 col-lg-6">
-                                  <h2 class="h4"><i class="fa fa-user"></i>&nbsp;Fahrer</h2>
-                                  <div><span><strong>Name</strong></span></div>
-                                  <div><span>0041791231234</span></div>
-                                  <div class="col"><button class="btn btn-primary btn-block" type="submit">Push-Benachrichtigung</i></button></div>
-                                  <hr class="d-sm-none d-md-block d-lg-none">
-                              </div>
-                              <div class="col-sm-6 col-md-12 col-lg-6">
-                                <h2 class="h4"><i class="fa fa-location-arrow"></i>&nbsp;Nächstes Ziel</h2>
-                                <div><span><strong>KuZeB</strong></span></div>
-                                <div><span>Zürcherstrasse 2</span></div>
-                                <div><span>5620 Bremgarten</span></div>
-                                <div><abbr data-toggle="tooltip" data-placement="top" title="Office Phone: 555-867-5309">O:</abbr> 555-867-5309</div>
-                                <hr class="d-sm-none">
-                            </div>
-                          </div>
-                      </div>
-                  </div>
-              </form>
-          </div>
-          <div class="container-fluid">
-              <h1 style="margin-top: 30px;">Fahrer 3</h1>
-              <hr>
-              <form id="contactForm" action="javascript:void(0);" method="get"><input class="form-control" type="hidden" name="Introduction" value="This email was sent from www.awebsite.com"><input class="form-control" type="hidden" name="subject" value="Awebsite.com Contact Form"><input class="form-control" type="hidden"
-                      name="to" value="email@awebsite.com">
-                  <div class="form-row">
-                      <div class="col-md-6">
-                          <div id="successfail"></div>
-                      </div>
-                  </div>
-                  <div class="form-row">
-                      <div class="col-12 col-md-6" id="message">
-                          <h2 class="h4"><i class="fa fa-envelope"></i> Neue Lieferung zuteilen<small></small></h2>
-                          <div class="form-group"><label for="from-name">Auftragsnummer</label>
-                              <div class="input-group">
-                                  <div class="input-group-prepend"></div>
-                              </div>
-                          </div><input class="form-control" type="text">
-                          <div class="form-group"><label for="from-email">Adresse</label><input class="form-control" type="text" style="margin: 0px;margin-top: 5px;margin-bottom: 5px;"><input class="form-control" type="text" style="margin-top: 5px;margin-bottom: 5px;">
-                              <input
-                                  class="form-control" type="text" style="margin-top: 5px;margin-bottom: 5px;">
-                                  <div class="input-group">
-                                      <div class="input-group-prepend"></div>
-                                  </div>
-                          </div>
-                          <div class="form-row">
-                              <div class="col-12 col-sm-6 col-md-12 col-lg-6">
-                                  <div class="form-group"><label for="from-phone">Telefonnummer</label>
-                                      <div class="input-group">
-                                          <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-phone"></i></span></div><input class="form-control" type="text" id="from-phone" name="phone" required="" placeholder="Primary Phone"></div>
-                                  </div>
-                              </div>
-                              <div class="col-12 col-sm-6 col-md-12 col-lg-6">
-                                  <div class="form-group"><label for="from-calltime">Lieferfrist</label>
-                                      <div class="input-group">
-                                          <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-clock-o"></i></span></div><select class="form-control" id="from-calltime" name="call time"><optgroup label="Best Time to Call"><option value="Morning" selected="">Morning</option><option value="Afternoon">Afternoon</option><option value="Evening">Evening</option></optgroup></select></div>
-                                  </div>
-                              </div>
-                          </div>
-                          <div class="form-group"><label for="from-comments">Kommentare</label><textarea class="form-control" id="from-comments" name="comments" placeholder="Enter Comments" rows="5"></textarea></div>
-                          <div class="form-group">
-                              <div class="form-row">
-                                  <div class="col"><button class="btn btn-primary btn-block" type="reset"><i class="fa fa-undo"></i> Reset</button></div>
-                                  <div class="col"><button class="btn btn-primary btn-block" type="submit">Submit <i class="fa fa-chevron-circle-right"></i></button></div>
-                              </div>
-                          </div>
-                          <hr class="d-flex d-md-none">
-                      </div>
-                      <div class="col-12 col-md-6">
-                          <h2 class="h4"><i class="fa fa-location-arrow"></i>&nbsp;Standort</h2>
-                          <div class="form-row">
-                              <div class="col-12"><img src="img/Fahrer3.png" style="width: 500px;"></div>
-                              <div class="col-sm-6 col-md-12 col-lg-6">
-                                  <h2 class="h4"><i class="fa fa-user"></i>&nbsp;Fahrer</h2>
-                                  <div><span><strong>Name</strong></span></div>
-                                  <div><span>0041791231234</span></div>
-                                  <div class="col"><button class="btn btn-primary btn-block" type="submit">Push-Benachrichtigung</i></button></div>
-                                  <hr class="d-sm-none d-md-block d-lg-none">
-                              </div>
-                              <div class="col-sm-6 col-md-12 col-lg-6">
-                                  <h2 class="h4"><i class="fa fa-location-arrow"></i>&nbsp;Nächstes Ziel</h2>
-                                  <div><span><strong>KuZeB</strong></span></div>
-                                  <div><span>Zürcherstrasse 2</span></div>
-                                  <div><span>5620 Bremgarten</span></div>
-                                  <div><abbr data-toggle="tooltip" data-placement="top" title="Office Phone: 555-867-5309">O:</abbr> 555-867-5309</div>
-                                  <hr class="d-sm-none">
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </form>
-          </div>
+          
 
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
