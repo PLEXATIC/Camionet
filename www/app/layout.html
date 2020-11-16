@@ -83,7 +83,6 @@
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Lieferungen:</h6>
-            <a class="collapse-item" onclick="updateIframeLieferungenLive()">Live Lieferungen</a>
             <a class="collapse-item" onclick="updateIframeLieferungenOffen()">Offene Lieferungen</a>
             <a class="collapse-item" onclick="updateIframeLieferungenVerarbeitet()">Verarbeitete Lieferungen</a>
           </div>
@@ -452,10 +451,6 @@
 
       function updateIframeFahrzeugeUnterwegs() {
         updateiFrame("fahrzeuge_unterwegs.html");
-      }
-
-      function updateIframeLieferungenLive() {
-        updateiFrame("lieferungen_live.html")
       }
 
       function updateIframeLieferungenOffen() {
