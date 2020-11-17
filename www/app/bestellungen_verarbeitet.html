@@ -21,61 +21,89 @@
 </head>
 
 <body>
+    <div div style="display: flex; align-items: center; justify-content: center; margin-top: 2rem;">
+        <h1 class="h3 mb-0 text-gray-800">Verarbeitete Bestellungen</h1>
+      </div>
+      <br/>
+      <br/>
 
-  <div class="card shadow" style="width: 98%;margin-bottom: 28px;">
-    <div class="card-header py-3">
-        <p class="text-primary m-0 font-weight-bold">Verarbeitete Bestellungen</p>
-    </div>
-    <div class="card-body">
-        <div class="row">
-            <div class="col-md-6 text-nowrap">
-            <div class="col-md-6">
-                <div class="text-md-right dataTables_filter" id="dataTable_filter-1"><label><input type="search" class="form-control form-control-sm" aria-controls="dataTable" placeholder="Search"></label></div>
+    <div class="container-fluid" style="padding-bottom: 30px;">
+        <div role="tablist" id="accordion-1"></div>
+    <div class="card shadow" style="width: 100%; margin-bottom: 28px;">
+        <div class="card-header py-3">
+            <p class="text-primary m-0 font-weight-bold">Auftrags liste</p>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6 text-nowrap">
+                    <div id="dataTable_length-1" class="dataTables_length" aria-controls="dataTable"><label>Show&nbsp;<select class="form-control form-control-sm custom-select custom-select-sm"><option value="10" selected="">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select>&nbsp;</label></div>
+                </div>
+                <div class="col-md-6">
+                    <div class="text-md-right dataTables_filter" id="dataTable_filter-1"><label><input type="search" class="form-control form-control-sm" aria-controls="dataTable" placeholder="Search"></label></div>
+                </div>
+            </div>
+            <div class="table-responsive table mt-2" id="dataTable-2" role="grid" aria-describedby="dataTable_info">
+                <table class="table my-0" id="dataTable">
+                    <thead>
+                        <tr>
+                            <th>Produkt</th>
+                            <th>Anzahl</th>
+                            <th>Adresse<br></th>
+                            <th>Bestell-Nummer</th>
+                            <th>Geliefert am</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Rotwein</td>
+                            <td>12</td>
+                            <td>Pilatusstrasse 1, 6003 Luzern<br></td>
+                            <td>54116</td>
+                            <td>08:15 01/12/2020</td>
+                        </tr>
+                        <tr>
+                            <td>Whiskey<br></td>
+                            <td>8</td>
+                            <td>Denkmalstrasse 11, 6006 Luzern<br></td>
+                            <td>45365</td>
+                            <td>10:30 01/12/2020<br></td>
+                        </tr>
+                        <tr>
+                            <td>Bombay Bar<br></td>
+                            <td>12</td>
+                            <td>Widdergasse 6, 8001 Zürich<br></td>
+                            <td>56441</td>
+                            <td>10:30 01/12/2020<br></td>
+                        </tr>
+                        <tr>
+                            <td>Cinchona Bar<br></td>
+                            <td>14</td>
+                            <td>Langstrasse 150, 8004 Zürich<br></td>
+                            <td>81461</td>
+                            <td>11:00 01/11/2020<br></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="row">
+                <div class="col-md-6 align-self-center">
+                    <p id="dataTable_info-1" class="dataTables_info" role="status" aria-live="polite">Showing 1 to 10 of 27</p>
+                </div>
+                <div class="col-md-6">
+                    <nav class="d-lg-flex justify-content-lg-end dataTables_paginate paging_simple_numbers">
+                        <ul class="pagination">
+                            <li class="page-item disabled"><a class="page-link" href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </div>
-        <div class="table-responsive table mt-2" id="dataTable-2" role="grid" aria-describedby="dataTable_info">
-            <table class="table my-0" id="dataTable">
-                <thead>
-                    <tr>
-                        <th>Produkt</th>
-                        <th>Anzahl</th>
-                        <th>Adresse</th>
-                        <th>Bestell-Nummer<br></th>
-                        <th>Geliefert am</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Rotwein</td>
-                        <td>12</td>
-                        <td>Pilatusstrasse 1, 6003 Luzern<br></td>
-                        <td>54116</td>
-                        <td>08:15 01/11/2020</td>
-                    </tr>
-                    <tr>
-                        <td>Whiskey</td>
-                        <td>8</td>
-                        <td>Denkmalstrasse 11, 6006 Luzern<br></td>
-                        <td>45365</td>
-                        <td>10:30 01/11/2020<br></td>
-                    </tr>
-                    <tr>
-                        <td>Bombay Gin</td>
-                        <td>12</td>
-                        <td>Widdergasse 6, 8001 Zürich<br></td>
-                        <td>56441</td>
-                        <td>11:45 01/11/2020<br></td>
-                    </tr>
-                    <tr>
-                        <td>Quöllfrisch</td>
-                        <td>14 Harrassen</td>
-                        <td>Langstrasse 150, 8004 Zürich<br></td>
-                        <td>81461</td>
-                        <td>07:30 01/11/2020<br></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+    </div>
+
 
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
