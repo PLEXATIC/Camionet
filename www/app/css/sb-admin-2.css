@@ -7510,9 +7510,9 @@ button.bg-dark:focus {
 
 .fixed-bottom {
   position: fixed;
-  right: 0;
+  right: auto;
   bottom: 0;
-  left: 0;
+  left: auto;
   z-index: 1030;
 }
 
