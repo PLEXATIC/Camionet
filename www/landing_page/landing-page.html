@@ -26,17 +26,17 @@
 <body>
 
   <!-- Navigation -->
-  <nav class="navbar navbar-light bg-light static-top">
+  <nav class="navbar navbar-light bg-light sticky-top">
     <div class="container">
       <a class="navbar-brand" href="#">
         <img src="icons/lastwagen.svg" width="30" height="30" class="d-inline-block align-top" alt="">
         CamioNet
       </a>
       <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-link" href="#">Funktionen</a>
-      <a class="nav-link" href="#">Kunden</a>
-      <a class="nav-link" href="#">Preise</a>
-      <a class="nav-link" href="#">Unternehmen</a>
+      <a class="nav-link" href="#function">Funktionen</a>
+      <a class="nav-link" href="#customers">Kunden</a>
+      <a class="nav-link" href="#price">Preise</a>
+      <a class="nav-link" href="#team">Team</a>
       <a class="btn btn-primary" href="../app/app-login.html">Sign In</a>
     </div>
   </nav>
@@ -60,8 +60,9 @@
   </header>
 
   <!-- Funktionen -->
-  <section class="features-icons bg-light text-center">
+  <section class="features-icons bg-light text-center" id="function">
     <div class="container">
+      <h2 class="mb-5">Funktionen</h2>
       <div class="row">
         <div class="col-lg-4">
           <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
@@ -78,7 +79,7 @@
               <i class="fas fa-cart-arrow-down m-auto text-primary"></i>
             </div>
             <h3>Bestellungen</h3>
-            <p class="lead mb-0">Hier hast du alles Bestellungen stets im Blick.</p>
+            <p class="lead mb-0">Hier hast du alle Bestellungen stets im Blick.</p>
           </div>
         </div>
         <div class="col-lg-4">
@@ -92,43 +93,84 @@
         </div>
       </div>
     </div>
+    <hr style="width: 80%;">
   </section>
 
   <!-- Kunden -->
 
-
-  <!-- Image Showcases -->
-  <section class="showcase">
-    <div class="container-fluid p-0">
-      <div class="row no-gutters">
-
-        <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/bg-showcase-1.jpg');"></div>
-        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-          <h2>Fully Responsive Design</h2>
-          <p class="lead mb-0">When you use a theme created by Start Bootstrap, you know that the theme will look great on any device, whether it's a phone, tablet, or desktop the page will behave responsively!</p>
-        </div>
-      </div>
-      <div class="row no-gutters">
-        <div class="col-lg-6 text-white showcase-img" style="background-image: url('img/bg-showcase-2.jpg');"></div>
-        <div class="col-lg-6 my-auto showcase-text">
-          <h2>Updated For Bootstrap 4</h2>
-          <p class="lead mb-0">Newly improved, and full of great utility classes, Bootstrap 4 is leading the way in mobile responsive web development! All of the themes on Start Bootstrap are now using Bootstrap 4!</p>
-        </div>
-      </div>
-      <div class="row no-gutters">
-        <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image: url('img/bg-showcase-3.jpg');"></div>
-        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-          <h2>Easy to Use &amp; Customize</h2>
-          <p class="lead mb-0">Landing Page is just HTML and CSS with a splash of SCSS for users who demand some deeper customization options. Out of the box, just add your content and images, and your new landing page will be ready to go!</p>
-        </div>
-      </div>
+  <section class="features-icons bg-light text-center" id="customers">
+    <div class="container">
+      <h2 class="mb-5">Kunden</h2>
+      <ul class="list-group" style="margin: auto; width: 50%; text-align: left;">
+        <li class="list-group-item">Kunde 1</li>
+        <li class="list-group-item">Kunde 2</li>
+        <li class="list-group-item">Kunde 3</li>
+        <li class="list-group-item">Kunde 4</li>
+        <li class="list-group-item">Kunde 5</li>
+      </ul>
     </div>
+    <hr style="width: 80%;">
   </section>
 
-  <!-- Unternehmen -->
-  <section class="testimonials text-center bg-light">
+<!-- Funktionen -->
+<section class="features-icons bg-light text-center" id="price">
+  <h2 class="mb-5">Preise</h2>
+  <div class="container" style="display: flex; align-items: center; justify-content: center;">
+  <div class="card" style="width: 18rem; margin: 2rem;">
+    <img class="card-img-top" src="../landing_page/img/p_1.png" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Light</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">9 CHF pro Route </li>
+      <li class="list-group-item">Anzahlt Produkte: <p style="color: blue;">Bis 100</p></li>
+      <li class="list-group-item">Anzahlt Fahzeuge: <p style="color: blue;">Bis 5</p></li>
+    </ul>
+    <div style="margin: auto;">
+      <button href="#" class="btn btn-primary" style="width:min-content; margin: 1rem;">Jetzt Registrieren</button>
+      <button href="#" class="btn btn-primary" style="width:min-content; margin: 1rem;">Mehr Infos</button>
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem; margin: 2rem;">
+    <img class="card-img-top" src="../landing_page/img/p_2.png" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Basic</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">29 CHF pro Fahrzeug</li>
+      <li class="list-group-item">Anzahlt Produkte: <p style="color: blue;">Bis 500</p></li>
+      <li class="list-group-item">Anzahlt Fahzeuge: <p style="color: blue;">Bis 10</p></li>
+    </ul>
+    <div style="margin: auto;">
+      <button href="#" class="btn btn-primary" style="width:min-content; margin: 1rem;">Jetzt Registrieren</button>
+      <button href="#" class="btn btn-primary" style="width:min-content; margin: 1rem;">Mehr Infos</button>
+    </div>
+  </div>
+
+  <div class="card" style="width: 18rem; margin: 2rem;">
+    <img class="card-img-top" src="../landing_page/img/p_3.png" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Plus</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">49 CHF pro Route</li>
+      <li class="list-group-item">Anzahlt Produkte: <p style="color: blue;">Unbegrenzt</p></li>
+      <li class="list-group-item">Anzahlt Fahzeuge: <p style="color: blue;">Unbegrenzt</p></li>
+    </ul>
+    <div style="margin: auto;">
+      <button href="#" class="btn btn-primary" style="width:min-content; margin: 1rem;">Jetzt Registrieren</button>
+      <button href="#" class="btn btn-primary" style="width:min-content; margin: 1rem;">Mehr Infos</button>
+    </div>
+  </div>
+</div>
+<hr style="width: 80%;">
+</section>
+
+  <!-- Team -->
+  <section class="testimonials text-center bg-light" id="team">
     <div class="container">
-      <h2 class="mb-5">Das Unternehmen</h2>
+      <h2 class="mb-5">Team</h2>
       <div class="row">
         <div class="col-lg-4">
           <div class="testimonial-item mx-auto mb-5 mb-lg-0">
@@ -224,7 +266,7 @@
               <a href="#">Privacy Policy</a>
             </li>
           </ul>
-          <p class="text-muted small mb-4 mb-lg-0">&copy; Your Website 2020. All Rights Reserved.</p>
+          <p class="text-muted small mb-4 mb-lg-0">&copy; CamioNet AG 2020. All Rights Reserved.</p>
         </div>
         <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
           <ul class="list-inline mb-0">
