@@ -25,14 +25,14 @@
 <div style="display: flex; align-items: center; justify-content: center;">
   <div class="d-sm-flex align-items-center justify-content-between mb-4">
     <h1 class="h3 mb-0 text-gray-800" style="margin-left: 3rem; margin-top: 2rem;">Rotweine</h1>
-  </div>  
+  </div>
 </div>
 
 <div style="display: flex; align-items: center; justify-content: center;">
   <div align="left" style="margin-left: 2rem;">
-    <button href="#" class="btn btn-primary" style="width:auto; margin: 1rem;">Neues Produkt</button>
+    <button id="AddProduct" href="#" class="btn btn-primary" style="width:auto; margin: 1rem;">Neues Produkt</button>
   </div>
-  </div>
+</div>
 </div>
 
 <div class="row" style="display: flex; align-items: center; justify-content: center;">
@@ -45,7 +45,8 @@
     <ul class="list-group list-group-flush">
       <li class="list-group-item">11.60 CHF</li>
       <li class="list-group-item">33 cl, 4er Pack</li>
-      <li class="list-group-item">Produktbestand: <p style="color: blue;">424</p></li>
+      <li class="list-group-item">Produktbestand: <p style="color: blue;">424</p>
+      </li>
     </ul>
     <div align="left">
       <button href="#" class="btn btn-primary" style="width:min-content; margin: 1rem;">Jetzt liefern</button>
@@ -61,7 +62,8 @@
     <ul class="list-group list-group-flush">
       <li class="list-group-item">14.60 CHF</li>
       <li class="list-group-item">33 cl, 4er Pack</li>
-      <li class="list-group-item">Produktbestand: <p style="color: blue;">85</p></li>
+      <li class="list-group-item">Produktbestand: <p style="color: blue;">85</p>
+      </li>
     </ul>
     <div align="left">
       <button href="#" class="btn btn-primary" style="width:min-content; margin: 1rem;">Jetzt liefern</button>
@@ -77,7 +79,8 @@
     <ul class="list-group list-group-flush">
       <li class="list-group-item">12.90 CHF</li>
       <li class="list-group-item">33 cl, 4er Pack</li>
-      <li class="list-group-item">Produktbestand: <p style="color: blue;">210</p></li>
+      <li class="list-group-item">Produktbestand: <p style="color: blue;">210</p>
+      </li>
     </ul>
     <div align="left">
       <button href="#" class="btn btn-primary" style="width:min-content; margin: 1rem;">Jetzt liefern</button>
@@ -93,7 +96,8 @@
     <ul class="list-group list-group-flush">
       <li class="list-group-item">11.60 CHF</li>
       <li class="list-group-item">33 cl, 4er Pack</li>
-      <li class="list-group-item">Produktbestand: <p style="color: blue;">424</p></li>
+      <li class="list-group-item">Produktbestand: <p style="color: blue;">424</p>
+      </li>
     </ul>
     <div align="left">
       <button href="#" class="btn btn-primary" style="width:min-content; margin: 1rem;">Jetzt liefern</button>
@@ -109,7 +113,8 @@
     <ul class="list-group list-group-flush">
       <li class="list-group-item">14.60 CHF</li>
       <li class="list-group-item">33 cl, 4er Pack</li>
-      <li class="list-group-item">Produktbestand: <p style="color: blue;">85</p></li>
+      <li class="list-group-item">Produktbestand: <p style="color: blue;">85</p>
+      </li>
     </ul>
     <div align="left">
       <button href="#" class="btn btn-primary" style="width:min-content; margin: 1rem;">Jetzt liefern</button>
@@ -125,7 +130,8 @@
     <ul class="list-group list-group-flush">
       <li class="list-group-item">12.90 CHF</li>
       <li class="list-group-item">33 cl, 4er Pack</li>
-      <li class="list-group-item">Produktbestand: <p style="color: blue;">210</p></li>
+      <li class="list-group-item">Produktbestand: <p style="color: blue;">210</p>
+      </li>
     </ul>
     <div align="left">
       <button href="#" class="btn btn-primary" style="width:min-content; margin: 1rem;">Jetzt liefern</button>
@@ -133,18 +139,96 @@
     </div>
   </div>
 
-  <!-- End of Main Content -->
 
-  <!-- Bootstrap core JavaScript-->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Empty Input Card-->
+<div id="myModal" class="modal">
+  <div class="modal-content" style="height: 100%;">
+  <div style="margin-right: 15px; margin-top: 15px">
+    <span class="close">&times;</span>
+  </div>
+    <div>
+      <div class="card" style="width: 18rem; margin: 2rem; margin-left: 40%; margin-right: 40%">
+        <label for="img">Produktbild hochladen:</label>
+        <input type="file" id="img" name="img" accept="image/*" required>
+        <div class="card-body">
+          <div class="form-group">
+            <label for="produkttitel">
+              Produkttitel
+            </label>
+            <input type="text" class="form-control" value="" placeholder="Produkttitel" id="produkttitel" required/>
+          </div>
+                    <ul class="list-group list-group-flush">
+            <div class="form-group">
+              <label for="preis">
+                Preis
+              </label>
+              <input type="text" class="form-control" value="" placeholder="Preis CHF" id="preis" required/>
+            </div>
+            <div class="form-group">
+              <label for="grösse">
+                Grösse
+              </label>
+              <input type="text" class="form-control" value="" placeholder="cl und Packgrösse" id="grösse" required/>
+            </div>
+            <div class="form-group">
+              <label for="produktbestand">
+                Produktbestand
+              </label>
+              <input type="number" class="form-control" value="" placeholder="Menge an Lager" id="produktbestand" required/>
+            </div>
+            </li>
+          </ul>
+          <div align="left">
+            <button href="#" class="btn btn-primary align-center" style="width:min-content; margin: 1rem;" onclick="span.onclick()">Hinzufügen</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-  <!-- Core plugin JavaScript-->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+        <!-- Popup Script-->
+        <script>
+          // Get the modal
+          var modal = document.getElementById("myModal");
 
-  <!-- Custom scripts for all pages-->
-  <script src="js/sb-admin-2.min.js"></script>
+          // Get the button that opens the modal
+          var btn = document.getElementById("AddProduct");
 
-  </body>
+          // Get the <span> element that closes the modal
+          var span = document.getElementsByClassName("close")[0];
+          // When the user clicks the button, open the modal 
+          btn.onclick = function () {
+            modal.style.display = "block";
+          }
+
+          // When the user clicks on <span> (x), close the modal
+          span.onclick = function () {
+            modal.style.display = "none";
+          }
+
+          // When the user clicks anywhere outside of the modal, close it
+          window.onclick = function (event) {
+            if (event.target == modal) {
+              modal.style.display = "none";
+            }
+          }
+        </script>
+      </div>
+      </br>
+
+      <!-- End of Main Content -->
+
+      <!-- Bootstrap core JavaScript-->
+      <script src="vendor/jquery/jquery.min.js"></script>
+      <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+      <!-- Core plugin JavaScript-->
+      <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+      <!-- Custom scripts for all pages-->
+      <script src="js/sb-admin-2.min.js"></script>
+
+      </body>
 
 </html>
