@@ -30,7 +30,7 @@
 
 <div style="display: flex; align-items: center; justify-content: center;">
   <div align="left" style="margin-left: 2rem;">
-    <button href="#" class="btn btn-primary" style="width:auto; margin: 1rem;">Neues Produkt</button>
+    <button href="#" class="btn btn-primary" style="width:auto; margin: 1rem;" id="AddProduct">Neues Produkt</button>
   </div>
   </div>
 </div>
@@ -133,6 +133,83 @@
     </div>
   </div>
 
+
+  <!-- Empty Input Card-->
+  <div id="myModal" class="modal">
+    <div class="modal-content" style="height: 100%;">
+    <div style="margin-right: 15px; margin-top: 15px">
+      <span class="close">&times;</span>
+    </div>
+      <div>
+        <div class="card" style="width: 18rem; margin: 2rem; margin-left: 40%; margin-right: 40%">
+          <label for="img">Produktbild hochladen:</label>
+          <input type="file" id="img" name="img" accept="image/*" required>
+          <div class="card-body">
+            <div class="form-group">
+              <label for="produkttitel">
+                Produkttitel
+              </label>
+              <input type="text" class="form-control" value="" placeholder="Produkttitel" id="produkttitel" required/>
+            </div>
+                      <ul class="list-group list-group-flush">
+              <div class="form-group">
+                <label for="preis">
+                  Preis
+                </label>
+                <input type="text" class="form-control" value="" placeholder="Preis CHF" id="preis" required/>
+              </div>
+              <div class="form-group">
+                <label for="grösse">
+                  Grösse
+                </label>
+                <input type="text" class="form-control" value="" placeholder="cl und Packgrösse" id="grösse" required/>
+              </div>
+              <div class="form-group">
+                <label for="produktbestand">
+                  Produktbestand
+                </label>
+                <input type="number" class="form-control" value="" placeholder="Menge an Lager" id="produktbestand" required/>
+              </div>
+              </li>
+            </ul>
+            <div align="left">
+              <button href="#" class="btn btn-primary align-center" style="width:min-content; margin: 1rem;" onclick="span.onclick()">Hinzufügen</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+          <!-- Popup Script-->
+          <script>
+            // Get the modal
+            var modal = document.getElementById("myModal");
+  
+            // Get the button that opens the modal
+            var btn = document.getElementById("AddProduct");
+  
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+            // When the user clicks the button, open the modal 
+            btn.onclick = function () {
+              modal.style.display = "block";
+            }
+  
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function () {
+              modal.style.display = "none";
+            }
+  
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+              }
+            }
+          </script>
+        </div>
+        </br>
   <!-- End of Main Content -->
 
   <!-- Bootstrap core JavaScript-->
