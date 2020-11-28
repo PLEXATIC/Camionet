@@ -94,11 +94,31 @@
 
           <!-- Content Row -->
 
-          <div class="row" style="display: flex; align-items: center; justify-content: center;">
+          <div class="row">
+            <div class="col-xl-4 col-lg-7">
+            <!-- Auslieferungen offen Donut Chart -->
+            <div class="card shadow mb-4">
+            <!-- Card Header - Dropdown -->
+                <div class="card-header py-3">
+                  <h6 class="m-0 font-weight-bold text-primary">Lieferungen</h6>
+                </div>
+                <!-- Card Body -->
+                <div class="card-body">
+                  <div class="chart-pie pt-4">
+                    <canvas id="myPieChart"></canvas>
+                  </div>
+                  <hr>
+                  <p style="line-height: 0.7;">Offene Lieferungen:</p>
+                  <p style="line-height: 0.5; color: #56A207;">Ökologisch: 65%</p>
+                  <p style="line-height: 0.5; color: #E15813;">Schnell: 35%</p>             
+                </div>
+              </div>
+            </div>
 
+          <!-- Content Row -->
+          <div class="col-xl-8 col-lg-5">              
             <!-- Auslieferungen Live -->
-            <div class="col-xl-9 col-lg-7">
-              <!-- Project Card Example -->
+            <!-- Project Card Example -->
               <div class="card shadow mb-4">
                 <div class="card-header py-3">
                   <h6 class="m-0 font-weight-bold text-primary">Auslieferungen Live</h6>
@@ -112,56 +132,48 @@
                   <div class="progress mb-4">
                     <div class="progress-bar bg-info" role="progressbar" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
-                
                 </div>
               </div>
+              <div style="display: flex; align-items: center; justify-content: center; margin-top: 2rem;" >
+                <h1 class="h4 mb-0 text-gray-800">Dank Camionet haben Sie bereits:</h1>
+              </div>
+              <!-- Content Row -->
+              <div class="row" style="display: flex; align-items: center; justify-content: center; margin-top: 2rem;">
+    
+                  <!-- offene Bestellungen -->
+                  <div class="col-xl- col-md-6 mb-4">
+                    <div class="card border-left-success shadow h-100 py-2">
+                      <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                          <div class="col mr-2">
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">53.25kg CO2 Ausstoss verhindert</div>
+                          </div>
+                          <div class="col-auto">
+                            <i class="fas fa-leaf fa-2x"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+    
+                  <!-- offene Bestellungen -->
+                  <div class="col-xl-5 col-md-6 mb-4">
+                    <div class="card border-left-success shadow h-100 py-2">
+                      <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                          <div class="col mr-2">
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">120.30 CHF Benzinkosten gespart</div>
+                          </div>
+                          <div class="col-auto">
+                            <i class="fas fa-gas-pump fa-2x"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
             </div>
-
-
           </div>
-
-
-          <div style="display: flex; align-items: center; justify-content: center; margin-top: 2rem;" >
-            <h1 class="h4 mb-0 text-gray-800">Dank Camionet haben Sie bereits:</h1>
           </div>
-          <!-- Content Row -->
-          <div class="row" style="display: flex; align-items: center; justify-content: center; margin-top: 2rem;">
-
-              <!-- offene Bestellungen -->
-              <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card border-left-success shadow h-100 py-2">
-                  <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                      <div class="col mr-2">
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">53.25kg CO2 Ausstoss verhindert</div>
-                      </div>
-                      <div class="col-auto">
-                        <i class="fas fa-leaf fa-2x"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- offene Bestellungen -->
-              <div class="col-xl-3 col-md-6 mb-4">
-                <div class="card border-left-success shadow h-100 py-2">
-                  <div class="card-body">
-                    <div class="row no-gutters align-items-center">
-                      <div class="col mr-2">
-                        <div class="h5 mb-0 font-weight-bold text-gray-800">120.30 CHF Benzinkosten gespart</div>
-                      </div>
-                      <div class="col-auto">
-                        <i class="fas fa-gas-pump fa-2x"></i>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-     
-          </div>
-
         </div>
         <!-- /.container-fluid -->
 
