@@ -22,83 +22,85 @@
   <link href="css/sb-admin-2.css" rel="stylesheet">
 
   <style>
-    tbody>tr>:nth-child(9){
-color:#DC3E1A;
-}
-
-tbody>tr>:nth-child(10){
-color:#DC3E1A;
-}
-</style>
-
-<style>
-
-  /* Carousel Styling */
-  /* WIP */
-  body{
-    font-size: 18px;
-    font-family: 'Helvetica', sans-serif;
-    font-weight: 400;
-    line-height: 120%;
-  }
-  main{
-    background: rgb(255, 255, 255);
-    height: 100vh;
-    width: 100vw;
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    
-  }
-  .location{
-    align-self: center;
-    padding: 10%;
-  }
-  
-    h2{
-        margin-top: 35%;
-        margin-bottom: 25%;
-        height: 50%;
-        background: rgba(255, 255, 255, 0.774);
-        width: 100%;
-        padding: 20px 20px;
-        display: block;
-        font-size: 20px;
-      }
-  
-  .featured{
-    align-self: center;
-  }
-  
-  .slider {
-      list-style: none;
-    padding: 0;
+    tbody>tr>:nth-child(9) {
+      color: #DC3E1A;
     }
+
+    tbody>tr>:nth-child(10) {
+      color: #DC3E1A;
+    }
+  </style>
+
+  <style>
+    /* Carousel Styling */
+    /* WIP */
+    body {
+      font-size: 18px;
+      font-family: 'Helvetica', sans-serif;
+      font-weight: 400;
+      line-height: 120%;
+    }
+
+    main {
+      background: rgb(255, 255, 255);
+      height: 100vh;
+      width: 100vw;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+    }
+
+    .location {
+      align-self: center;
+      padding: 10%;
+    }
+
+    h2 {
+      margin-top: 35%;
+      margin-bottom: 25%;
+      height: 50%;
+      background: rgba(255, 255, 255, 0.774);
+      width: 100%;
+      padding: 20px 20px;
+      display: block;
+      font-size: 20px;
+    }
+
+    .featured {
+      align-self: center;
+    }
+
+    .slider {
+      list-style: none;
+      padding: 0;
+    }
+
     .slider li {
       height: 400px;
       width: 300px;
       border-radius: 4px;
       background-color: #00bcd4;
-      display:flex; 
+      display: flex;
       text-align: center;
     }
-  
-      .slider li:nth-child(n) {
-        background-color: #0957e7;
-      }
-  
-  /* STACKED CARDS */
-  .stacked-cards {
+
+    .slider li:nth-child(n) {
+      background-color: #0957e7;
+    }
+
+    /* STACKED CARDS */
+    .stacked-cards {
       position: relative;
-  }
-  
-  .stacked-cards ul {
+    }
+
+    .stacked-cards ul {
       position: relative;
       max-width: 40%;
       margin: 0 auto;
       padding-left: 0;
-  }
-  
-  .stacked-cards li {
+    }
+
+    .stacked-cards li {
       margin-top: 5px;
       cursor: pointer;
       border-radius: 8px;
@@ -108,27 +110,29 @@ color:#DC3E1A;
       position: absolute;
       left: 50%;
       transition: 0.5s ease transform;
-  }
-  
-  .stacked-cards li:after {
+    }
+
+    .stacked-cards li:after {
       bottom: 0;
       content: "";
       left: 0;
       position: absolute;
       right: 0;
       top: 0;
-  }
-  .stacked-cards li img {
+    }
+
+    .stacked-cards li img {
       position: relative;
       display: block;
       max-width: 100%;
       height: auto;
-  }
-  .stacked-cards li.active {
+    }
+
+    .stacked-cards li.active {
       cursor: default;
       box-shadow: 0 5px 10px 0px #333;
       transition: 0.5s ease transform;
-  }
+    }
   </style>
 
 </head>
@@ -141,16 +145,16 @@ color:#DC3E1A;
   <div div style="display: flex; align-items: center; justify-content: center; margin-top: 2rem;">
     <h1 class="h3 mb-0 text-gray-800">Offene Bestellungen</h1>
   </div>
-</br>
-</br>
+  </br>
+  </br>
 
   <!-- Daten importieren / exportieren -->
   <div style="display: flex; align-items: right; justify-content: flex-end">
     <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" style="margin-right: 1%;">
       <i class="fas fa-download fa-sm text-white-50"></i> Daten exportieren</a>
 
-      <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" style="margin-right: 1%;">
-        <i class="fas fa-upload fa-sm text-white-50"></i> Daten importieren</a>
+    <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" style="margin-right: 1%;">
+      <i class="fas fa-upload fa-sm text-white-50"></i> Daten importieren</a>
   </div>
 
   <!-- Content Row-->
@@ -335,81 +339,82 @@ color:#DC3E1A;
                       <div class="panel-heading">
                         <h3>Auftrag hinzufügen</h3>
                       </div>
-                      <button type="button" id="updateButton" class="btn btn-primary" onclick="productUpdate();">Ökologische Lieferung</button>
-                      <button type="button" id="updateButton" class="btn btn-primary" onclick="productUpdate();">Schnelle Lieferung</button>
+                      <button type="button" id="updateButton" class="btn btn-primary"
+                        onclick="productUpdate();">Ökologische Lieferung</button>
+                      <button type="button" id="updateButton" class="btn btn-primary"
+                        onclick="productUpdate();">Schnelle Lieferung</button>
                       <div class="panel-body">
-                          <label for="produktname">
-                            Produktname
-                          </label>
-                          <input type="text" class="form-control" value="" placeholder="Produktname" id="produktname" />
-                        </div>
-                        <div class="form-group">
-                          <label for="menge">
-                            Menge
-                          </label>
-                          <input type="number" class="form-control" value="" placeholder="Menge" id="menge" />
-                        </div>
-
-                        <div class="form-group">
-                          <label for="gewicht">
-                            Gewicht
-                          </label>
-                          <input type="number" class="form-control" value="" placeholder="Gewicht in kg" id="gewicht" />
-                        </div>
-                        Adresse
-                        <div class="input-group">
-                          <label for="strasse">
-                          </label>
-                          <input type="text" class="form-control" value="" placeholder="Strasse" id="strasse"
-                            style="width: 150px;" />
-
-                          <label for="hausnummer">
-                          </label>
-                          <input type="text" class="form-control" value="" placeholder="Hausnummer" id="hausnummer"
-                            style="width: 150px;" />
-                        </div>
-                        </br>
-                        <div class="input-group">
-                          <label for="plz">
-                          </label>
-                          <input type="number" class="form-control" value="" placeholder="Plz" id="plz"
-                            style="width: 150px;" />
-
-                          <label for="ort">
-                          </label>
-                          <input type="text" class="form-control" value="" placeholder="Ort" id="ort"
-                            style="width: 150px;" />
-                        </div>
-                        </br>
-                        Lieferung (Datum/Zeit)
-                        <div class="input-group">
-                          <label for="lieferdatum">
-                          </label>
-                          <input type="date" class="form-control" value="" placeholder="dd-mm-yyyy" id="lieferdatum"
-                            style="width: 100px;" />
-
-                          <label for="lieferzeit">
-                            <input type="time" class="form-control" value="" placeholder="hh:mm" id="lieferzeit"
-                              style="width: 150px;" />
-                          </label>
-                        </div>
-
-                        <div class="form-group">
-                          <label for="auftragsnummer">
-                            Auftragsnummer
-                          </label>
-                          <input type="text" class="form-control" value="" placeholder="Auftragsnummer"
-                            id="auftragsnummer" />
-                        </div>
+                        <label for="produktname">
+                          Produktname
+                        </label>
+                        <input type="text" class="form-control" value="" placeholder="Produktname" id="produktname" />
+                      </div>
+                      <div class="form-group">
+                        <label for="menge">
+                          Menge
+                        </label>
+                        <input type="number" class="form-control" value="" placeholder="Menge" id="menge" />
                       </div>
 
-                      <div class="panel-footer">
-                        <div class="row">
-                          <div class="col-sm-6">
-                            <button type="button" id="updateButton" class="btn btn-primary" onclick="productUpdate();">
-                              Hinzufügen
-                            </button>
-                          </div>
+                      <div class="form-group">
+                        <label for="gewicht">
+                          Gewicht
+                        </label>
+                        <input type="number" class="form-control" value="" placeholder="Gewicht in kg" id="gewicht" />
+                      </div>
+                      Adresse
+                      <div class="input-group">
+                        <label for="strasse">
+                        </label>
+                        <input type="text" class="form-control" value="" placeholder="Strasse" id="strasse"
+                          style="width: 150px;" />
+
+                        <label for="hausnummer">
+                        </label>
+                        <input type="text" class="form-control" value="" placeholder="Hausnummer" id="hausnummer"
+                          style="width: 150px;" />
+                      </div>
+                      </br>
+                      <div class="input-group">
+                        <label for="plz">
+                        </label>
+                        <input type="number" class="form-control" value="" placeholder="Plz" id="plz"
+                          style="width: 150px;" />
+
+                        <label for="ort">
+                        </label>
+                        <input type="text" class="form-control" value="" placeholder="Ort" id="ort"
+                          style="width: 150px;" />
+                      </div>
+                      </br>
+                      Lieferung (Datum/Zeit)
+                      <div class="input-group">
+                        <label for="lieferdatum">
+                        </label>
+                        <input type="date" class="form-control" value="" placeholder="dd-mm-yyyy" id="lieferdatum"
+                          style="width: 100px;" />
+
+                        <label for="lieferzeit">
+                          <input type="time" class="form-control" value="" placeholder="hh:mm" id="lieferzeit"
+                            style="width: 150px;" />
+                        </label>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="auftragsnummer">
+                          Auftragsnummer
+                        </label>
+                        <input type="text" class="form-control" value="" placeholder="Auftragsnummer"
+                          id="auftragsnummer" />
+                      </div>
+                    </div>
+
+                    <div class="panel-footer">
+                      <div class="row">
+                        <div class="col-sm-6">
+                          <button type="button" id="updateButton" class="btn btn-primary" onclick="productUpdate();">
+                            Hinzufügen
+                          </button>
                         </div>
                       </div>
                     </div>
@@ -418,20 +423,21 @@ color:#DC3E1A;
               </div>
             </div>
           </div>
-          </br>
         </div>
-      </div>
-
-
-
-
-          </div>
-        </div>
+        </br>
       </div>
     </div>
+
+
+
+
   </div>
-</div>
-</div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
 
   <script>
     // Next id for adding a new Product
@@ -611,367 +617,403 @@ color:#DC3E1A;
     <h1 class="h3 mb-0 text-gray-800">Stammkunden</h1>
   </div>
   </br>
-<!-- Carousel Cards -->
+  <!-- Carousel Cards -->
 
-<div class="featured stacked-cards" style="align-items: center; z-index: 0;">
-  <ul class="slider">
-  <li class="item"><h2><div>Hive Z&uumlrich</div></br><div style="font-size: 16px;">Hive</br>Geroldstrasse 5</br>8005 Z&uumlrich </br></br><button type="button" id="Uebernehmen" class="btn btn-primary">&Uumlbernehmen</button></div></h2></li>
-  <li class="item"><h2><div>Roadhouse Luzern</div></br><div style="font-size: 16px;">Roadhouse Luzern AG</br>Pilatusstrasse 1</br>6003 Luzern</br></br><button type="button" id="Uebernehmen" class="btn btn-primary">&Uumlbernehmen</button></div></h2></li>
-  <li class="item"><h2><div>Nordportal Baden</div></br><div style="font-size: 16px;">Nordportal Eventhalle Baden</br>Schmiedestrasse 12</br>5400 Baden</br></br><button type="button" id="Uebernehmen" class="btn btn-primary">&Uumlbernehmen</button></div></h2></li>
-  <li class="item"><h2><div>Kofmehl</div></br><div style="font-size: 16px;">Kulturfabrik Kofmehl</br>Kofmehlweg 1</br>4503 Solothurn</br></br><button type="button" id="Uebernehmen" class="btn btn-primary">&Uumlbernehmen</button></div></h2></li>
-  <li class="item"><h2><div>Bierh&uumlbeli</div></br><div style="font-size: 16px;">Bierh&uumlbeli Bern</br>Neubr&uumlckstrasse 43</br>3012 Bern</br></br><button type="button" id="Uebernehmen" class="btn btn-primary">&Uumlbernehmen</button></div></h2></li>
-  <li class="item"><h2><div>Chollerhalle</div></br><div style="font-size: 16px;">Verein Chollerhalle</br>Chamerstrasse 177</br>6300 Zug</br></br><button type="button" id="Uebernehmen" class="btn btn-primary">&Uumlbernehmen</button></div></h2></li>
-</ul>
-</div>
-</br>
-</br>
-</br>
+  <div class="featured stacked-cards" style="align-items: center; z-index: 0;">
+    <ul class="slider">
+      <li class="item">
+        <h2>
+          <div>Hive Z&uumlrich</div></br>
+          <div style="font-size: 16px;">Hive</br>Geroldstrasse 5</br>8005 Z&uumlrich </br></br><button type="button"
+              id="Uebernehmen" class="btn btn-primary">&Uumlbernehmen</button></div>
+        </h2>
+      </li>
+      <li class="item">
+        <h2>
+          <div>Roadhouse Luzern</div></br>
+          <div style="font-size: 16px;">Roadhouse Luzern AG</br>Pilatusstrasse 1</br>6003 Luzern</br></br><button
+              type="button" id="Uebernehmen" class="btn btn-primary">&Uumlbernehmen</button></div>
+        </h2>
+      </li>
+      <li class="item">
+        <h2>
+          <div>Nordportal Baden</div></br>
+          <div style="font-size: 16px;">Nordportal Eventhalle Baden</br>Schmiedestrasse 12</br>5400
+            Baden</br></br><button type="button" id="Uebernehmen" class="btn btn-primary">&Uumlbernehmen</button></div>
+        </h2>
+      </li>
+      <li class="item">
+        <h2>
+          <div>Kofmehl</div></br>
+          <div style="font-size: 16px;">Kulturfabrik Kofmehl</br>Kofmehlweg 1</br>4503 Solothurn</br></br><button
+              type="button" id="Uebernehmen" class="btn btn-primary">&Uumlbernehmen</button></div>
+        </h2>
+      </li>
+      <li class="item">
+        <h2>
+          <div>Bierh&uumlbeli</div></br>
+          <div style="font-size: 16px;">Bierh&uumlbeli Bern</br>Neubr&uumlckstrasse 43</br>3012 Bern</br></br><button
+              type="button" id="Uebernehmen" class="btn btn-primary">&Uumlbernehmen</button></div>
+        </h2>
+      </li>
+      <li class="item">
+        <h2>
+          <div>Chollerhalle</div></br>
+          <div style="font-size: 16px;">Verein Chollerhalle</br>Chamerstrasse 177</br>6300 Zug</br></br><button
+              type="button" id="Uebernehmen" class="btn btn-primary">&Uumlbernehmen</button></div>
+        </h2>
+      </li>
+    </ul>
+  </div>
+  </br>
+  </br>
+  </br>
 
   <!-- Stammkunden Script-->
   <script>
-    /*
-    * Stacked Cards
-    */
-    
-    (function () {
+      /*
+      * Stacked Cards
+      */
+
+      (function () {
         bind = function (fn, me) {
-            return function () {
-                return fn.apply(me, arguments);
-            };
+          return function () {
+            return fn.apply(me, arguments);
+          };
         }
-    
+
         this.stackedCards = (function () {
-            stackedCards.prototype.defaults = {
-                layout: 'slide', // slide, fanOut
-                onClick: undefined, // onclick event provided
-                transformOrigin: "center", // css transformOrigin
-            };
-    
-            function stackedCards(options) {
-                if (options == null) {
-                    options = {};
-                }
-    
-                this.draw = bind(this.draw, this);
-                this.config = this.extend(options, this.defaults);
+          stackedCards.prototype.defaults = {
+            layout: 'slide', // slide, fanOut
+            onClick: undefined, // onclick event provided
+            transformOrigin: "center", // css transformOrigin
+          };
+
+          function stackedCards(options) {
+            if (options == null) {
+              options = {};
             }
-    
-            stackedCards.prototype.init = function () {
-                this.element = window.document.documentElement;
-                if ((ref = document.readyState) === "interactive" || ref === "complete") {
-                    this.draw();
-                } else {
-                    document.addEventListener('DOMContentLoaded', this.draw);
-                }
+
+            this.draw = bind(this.draw, this);
+            this.config = this.extend(options, this.defaults);
+          }
+
+          stackedCards.prototype.init = function () {
+            this.element = window.document.documentElement;
+            if ((ref = document.readyState) === "interactive" || ref === "complete") {
+              this.draw();
+            } else {
+              document.addEventListener('DOMContentLoaded', this.draw);
             }
-    
-            stackedCards.prototype.draw = function () {
-    
-                var me = this;
-    
-                var selector = this.config.selector;
-    
-                this.els = document.querySelectorAll(selector + " li");
-                var els = this.els;
-    
-                this.parent = els[0].parentNode;
-    
-                var getItemHeight = els[0].getBoundingClientRect().height;
-    
-                /*var liWidth = 0;
-                for(var q = 0;q<els.length; q++) {
-                    liWidth = liWidth + els[q].getBoundingClientRect().width;
-                }*/
-    
-                els[0].parentNode.style.height = parseInt(getItemHeight) + "px";
-    
-                // to get the active element's position, we will have to know if elements are in even/odd count
-                var lenAdjust = (els.length % 2 == 0 ? -2 : -1)
-    
-                // oneHalf if the centerPoint - things go left and right from here
-                var oneHalf = (els.length + lenAdjust) / 2;
-    
-                var activeTransform = "translate(" + -50 + "%, 0%)  scale(1)";
-    
-                this.detectSwipe();
-    
-    
-                Array.prototype.forEach.call(els, function (el) {
-    
-                    el.style.transformOrigin = me.config.transformOrigin;
-    
-                    el.addEventListener("click", function () {
-    
-                        var clickedEl = el;
-                        var nextCnt = 0;
-                        var prevCnt = 0;
-    
-                        do {
-                            // While there is a next sibling, loop
-                            var next = clickedEl.nextElementSibling;
-                            nextCnt = nextCnt + 1;
-    
-                        } while (clickedEl = clickedEl.nextElementSibling);
-    
-                        // re-initialize the clickedEl to do the same for prev elements
-                        clickedEl = el;
-    
-                        do {
-                            // While there is a prev sibling, loop
-                            var prev = clickedEl.previousElementSibling;
-                            prevCnt = prevCnt + 1;
-                        } while (clickedEl = clickedEl.previousElementSibling);
-    
-                        me.reCalculateTransformsOnClick(nextCnt - 1, prevCnt - 1)
-    
-                        me.loopNodeList(els, function (el) {
-                            el.classList.remove("active");
-                        })
-    
-                        el.classList.add("active");
-                        el.classList.add(me.config.layout)
-    
-    
-    
-                        el.style.zIndex = els.length * 5;
-                        el.style.transform = activeTransform;
-    
-                        if (me.config.onClick !== undefined) {
-                            me.config.onClick(el);
-                        }
-    
-                    });
-                });
-    
-                els[oneHalf].click();
-    
-            }
-    
-            stackedCards.prototype.reCalculateTransformsOnClick = function (nextCnt, prevCnt) {
-    
-                var z = 10;
-    
-                var els = this.nodelistToArray(this.els);
-    
-                var scale = 1,
-                    translateX = 0,
-                    rotateVal = 0,
-                    rotate = "";
-                var rotateNegStart = 0 // ((75 / els.length) * (oneHalf))*-1;
-    
-                var transformArr = [];
-                var zIndexArr = [];
-                var relArr = [];
-    
-                var layout = this.config.layout;
-    
-                var maxCntDivisor = Math.max(prevCnt, nextCnt);
-                var prevDivisor = 100 / (maxCntDivisor);
-                var nextDivisor = 100 / (maxCntDivisor);
-    
-                if (prevCnt > nextCnt) {
-                    scale = 0 + (100 / (prevCnt + 1)) / 100;
-                } else {
-                    scale = 1 - ((prevCnt) * (1 / (nextCnt + 1)));
-                }
-    
-                var rotatePrevStart = ((prevCnt * 10 / (prevCnt) * prevCnt)) * -1;
-                var rotateNextStart = ((nextCnt * 10 / (nextCnt)));
-    
-                for (var i = 0; i < prevCnt; i++) {
-                    switch (layout) {
-                        case "slide":
-                            if (i > 0) {
-                                scale = scale + (100 / (maxCntDivisor + 1)) / 100;
-                            }
-    
-                            translateX = (-50 - ((prevDivisor) * (prevCnt - i)));
-    
-                            rotate = "rotate(0deg)";
-                            break;
-                        case "fanOut":
-                            rotateVal = rotatePrevStart;
-    
-                            if (i > 0) {
-                                scale = scale + (100 / (maxCntDivisor + 1)) / 100;
-                            }
-                            translateX = (-50 - ((prevDivisor) * (prevCnt - i)));
-                            rotate = "rotate(" + rotateVal + "deg)";
-    
-                            rotatePrevStart = rotatePrevStart + ((prevCnt * 10) / prevCnt);
-    
-                            break;
-                        default:
-                            translateX = (150 - ((prevDivisor * 2) * i)) * -1;
-                            rotate = "rotate(0deg)";
-    
-                    }
-    
-                    var styleStr = "translate(" + translateX + "%, 0%)  scale(" + scale + ") " + rotate;
-    
-                    z = z + 1;
-    
-                    els[i].style.transform = styleStr;
-                    els[i].style.zIndex = z;
-    
-                }
-    
-                // we are going for active element, so make it higher
-                z = z - 1;
-    
-                var j = 0;
-    
-                rotateNegStart = 0;
-                scale = 1;
-                for (var i = prevCnt + 1; i < nextCnt + prevCnt + 1; i++) {
-                    j = j + 1;
-                    switch (layout) {
-                        case "slide":
-                            scale = scale - (100 / (maxCntDivisor + 1)) / 100;
-                            translateX = (50 - ((nextDivisor) * (j))) * -1;
-                            rotate = "rotate(0deg)";
-                            break;
-                        case "fanOut":
-                            rotateVal = rotateNextStart;
-    
-                            scale = scale - (100 / (maxCntDivisor + 1)) / 100;
-                            translateX = (50 - ((nextDivisor) * (j))) * -1;
-                            rotate = "rotate(" + rotateVal + "deg)";
-    
-                            rotateNextStart = rotateNextStart + ((nextCnt * 10) / nextCnt);
-                            break;
-                        default:
-                            translateX = (50 - ((prevDivisor * 2) * i)) * -1;
-                            rotate = "rotate(0deg)";
-    
-                    }
-    
-                    z = z - 1;
-    
-                    var styleStr = "translate(" + translateX + "%, 0%)  scale(" + scale + ") " + rotate;
-    
-                    els[i].style.transform = styleStr;
-                    els[i].style.zIndex = z;
-                }
-    
-    
-    
-            }
-    
-            stackedCards.prototype.detectSwipe = function () {
-                var me = this;
-                var regionEl = document.querySelector(me.config.selector);
-    
-                me.detectSwipeDir(regionEl, function (swipedir) {
-                    var activeEl = document.querySelector(me.config.selector + " li.active");
-                    if (swipedir == 'left') {
-                        activeEl.nextElementSibling.click();
-                    } else if (swipedir == "right") {
-                        activeEl.previousElementSibling.click();
-                    }
+          }
+
+          stackedCards.prototype.draw = function () {
+
+            var me = this;
+
+            var selector = this.config.selector;
+
+            this.els = document.querySelectorAll(selector + " li");
+            var els = this.els;
+
+            this.parent = els[0].parentNode;
+
+            var getItemHeight = els[0].getBoundingClientRect().height;
+
+            /*var liWidth = 0;
+            for(var q = 0;q<els.length; q++) {
+                liWidth = liWidth + els[q].getBoundingClientRect().width;
+            }*/
+
+            els[0].parentNode.style.height = parseInt(getItemHeight) + "px";
+
+            // to get the active element's position, we will have to know if elements are in even/odd count
+            var lenAdjust = (els.length % 2 == 0 ? -2 : -1)
+
+            // oneHalf if the centerPoint - things go left and right from here
+            var oneHalf = (els.length + lenAdjust) / 2;
+
+            var activeTransform = "translate(" + -50 + "%, 0%)  scale(1)";
+
+            this.detectSwipe();
+
+
+            Array.prototype.forEach.call(els, function (el) {
+
+              el.style.transformOrigin = me.config.transformOrigin;
+
+              el.addEventListener("click", function () {
+
+                var clickedEl = el;
+                var nextCnt = 0;
+                var prevCnt = 0;
+
+                do {
+                  // While there is a next sibling, loop
+                  var next = clickedEl.nextElementSibling;
+                  nextCnt = nextCnt + 1;
+
+                } while (clickedEl = clickedEl.nextElementSibling);
+
+                // re-initialize the clickedEl to do the same for prev elements
+                clickedEl = el;
+
+                do {
+                  // While there is a prev sibling, loop
+                  var prev = clickedEl.previousElementSibling;
+                  prevCnt = prevCnt + 1;
+                } while (clickedEl = clickedEl.previousElementSibling);
+
+                me.reCalculateTransformsOnClick(nextCnt - 1, prevCnt - 1)
+
+                me.loopNodeList(els, function (el) {
+                  el.classList.remove("active");
                 })
-    
-            }
-    
-            stackedCards.prototype.extend = function (custom, defaults) {
-                var key, value;
-                for (key in defaults) {
-                    value = defaults[key];
-                    if (custom[key] == null) {
-                        custom[key] = value;
-                    }
+
+                el.classList.add("active");
+                el.classList.add(me.config.layout)
+
+
+
+                el.style.zIndex = els.length * 5;
+                el.style.transform = activeTransform;
+
+                if (me.config.onClick !== undefined) {
+                  me.config.onClick(el);
                 }
-                return custom;
+
+              });
+            });
+
+            els[oneHalf].click();
+
+          }
+
+          stackedCards.prototype.reCalculateTransformsOnClick = function (nextCnt, prevCnt) {
+
+            var z = 10;
+
+            var els = this.nodelistToArray(this.els);
+
+            var scale = 1,
+              translateX = 0,
+              rotateVal = 0,
+              rotate = "";
+            var rotateNegStart = 0 // ((75 / els.length) * (oneHalf))*-1;
+
+            var transformArr = [];
+            var zIndexArr = [];
+            var relArr = [];
+
+            var layout = this.config.layout;
+
+            var maxCntDivisor = Math.max(prevCnt, nextCnt);
+            var prevDivisor = 100 / (maxCntDivisor);
+            var nextDivisor = 100 / (maxCntDivisor);
+
+            if (prevCnt > nextCnt) {
+              scale = 0 + (100 / (prevCnt + 1)) / 100;
+            } else {
+              scale = 1 - ((prevCnt) * (1 / (nextCnt + 1)));
             }
-    
-            stackedCards.prototype.nodelistToArray = function (nodelist) {
-                var results = [];
-                var i, element;
-                for (i = 0; i < nodelist.length; i++) {
-                    element = nodelist[i];
-                    results.push(element);
+
+            var rotatePrevStart = ((prevCnt * 10 / (prevCnt) * prevCnt)) * -1;
+            var rotateNextStart = ((nextCnt * 10 / (nextCnt)));
+
+            for (var i = 0; i < prevCnt; i++) {
+              switch (layout) {
+                case "slide":
+                  if (i > 0) {
+                    scale = scale + (100 / (maxCntDivisor + 1)) / 100;
+                  }
+
+                  translateX = (-50 - ((prevDivisor) * (prevCnt - i)));
+
+                  rotate = "rotate(0deg)";
+                  break;
+                case "fanOut":
+                  rotateVal = rotatePrevStart;
+
+                  if (i > 0) {
+                    scale = scale + (100 / (maxCntDivisor + 1)) / 100;
+                  }
+                  translateX = (-50 - ((prevDivisor) * (prevCnt - i)));
+                  rotate = "rotate(" + rotateVal + "deg)";
+
+                  rotatePrevStart = rotatePrevStart + ((prevCnt * 10) / prevCnt);
+
+                  break;
+                default:
+                  translateX = (150 - ((prevDivisor * 2) * i)) * -1;
+                  rotate = "rotate(0deg)";
+
+              }
+
+              var styleStr = "translate(" + translateX + "%, 0%)  scale(" + scale + ") " + rotate;
+
+              z = z + 1;
+
+              els[i].style.transform = styleStr;
+              els[i].style.zIndex = z;
+
+            }
+
+            // we are going for active element, so make it higher
+            z = z - 1;
+
+            var j = 0;
+
+            rotateNegStart = 0;
+            scale = 1;
+            for (var i = prevCnt + 1; i < nextCnt + prevCnt + 1; i++) {
+              j = j + 1;
+              switch (layout) {
+                case "slide":
+                  scale = scale - (100 / (maxCntDivisor + 1)) / 100;
+                  translateX = (50 - ((nextDivisor) * (j))) * -1;
+                  rotate = "rotate(0deg)";
+                  break;
+                case "fanOut":
+                  rotateVal = rotateNextStart;
+
+                  scale = scale - (100 / (maxCntDivisor + 1)) / 100;
+                  translateX = (50 - ((nextDivisor) * (j))) * -1;
+                  rotate = "rotate(" + rotateVal + "deg)";
+
+                  rotateNextStart = rotateNextStart + ((nextCnt * 10) / nextCnt);
+                  break;
+                default:
+                  translateX = (50 - ((prevDivisor * 2) * i)) * -1;
+                  rotate = "rotate(0deg)";
+
+              }
+
+              z = z - 1;
+
+              var styleStr = "translate(" + translateX + "%, 0%)  scale(" + scale + ") " + rotate;
+
+              els[i].style.transform = styleStr;
+              els[i].style.zIndex = z;
+            }
+
+
+
+          }
+
+          stackedCards.prototype.detectSwipe = function () {
+            var me = this;
+            var regionEl = document.querySelector(me.config.selector);
+
+            me.detectSwipeDir(regionEl, function (swipedir) {
+              var activeEl = document.querySelector(me.config.selector + " li.active");
+              if (swipedir == 'left') {
+                activeEl.nextElementSibling.click();
+              } else if (swipedir == "right") {
+                activeEl.previousElementSibling.click();
+              }
+            })
+
+          }
+
+          stackedCards.prototype.extend = function (custom, defaults) {
+            var key, value;
+            for (key in defaults) {
+              value = defaults[key];
+              if (custom[key] == null) {
+                custom[key] = value;
+              }
+            }
+            return custom;
+          }
+
+          stackedCards.prototype.nodelistToArray = function (nodelist) {
+            var results = [];
+            var i, element;
+            for (i = 0; i < nodelist.length; i++) {
+              element = nodelist[i];
+              results.push(element);
+            }
+            return results;
+          }
+
+          stackedCards.prototype.loopNodeList = function (els, callback, scope) {
+            for (var i = 0; i < els.length; i++) {
+              callback.call(scope, els[i])
+            }
+          }
+
+
+          stackedCards.prototype.scrolledIn = function (el, offset) {
+            if (typeof el == 'undefined') return;
+
+            var elemTop = el.getBoundingClientRect().top;
+            var elemBottom = el.getBoundingClientRect().bottom;
+
+            var scrolledInEl = (elemTop >= 0) && (elemTop <= window.innerHeight);
+            return scrolledInEl;
+
+          }
+
+          stackedCards.prototype.detectSwipeDir = function (el, callback) {
+
+            //credits: http://www.javascriptkit.com/javatutors/touchevents2.shtml
+
+            var touchsurface = el,
+              swipedir,
+              startX,
+              startY,
+              distX,
+              distY,
+              threshold = 75, //required min distance traveled to be considered swipe
+              restraint = 100, // maximum distance allowed at the same time in perpendicular direction
+              allowedTime = 300, // maximum time allowed to travel that distance
+              elapsedTime,
+              startTime,
+              handleswipe = callback || function (swipedir) { }
+
+            touchsurface.addEventListener('touchstart', function (e) {
+              var touchobj = e.changedTouches[0]
+              swipedir = 'none'
+              dist = 0
+              startX = touchobj.pageX
+              startY = touchobj.pageY
+              startTime = new Date().getTime() // record time when finger first makes contact with surface
+              e.preventDefault()
+            }, false)
+
+            touchsurface.addEventListener('touchmove', function (e) {
+              // e.preventDefault() // prevent scrolling when inside DIV
+            }, false)
+
+            touchsurface.addEventListener('touchend', function (e) {
+              var touchobj = e.changedTouches[0]
+              distX = touchobj.pageX - startX // get horizontal dist traveled by finger while in contact with surface
+              distY = touchobj.pageY - startY // get vertical dist traveled by finger while in contact with surface
+              elapsedTime = new Date().getTime() - startTime // get time elapsed
+              if (elapsedTime <= allowedTime) { // first condition for awipe met
+                if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint) { // 2nd condition for horizontal swipe met
+                  swipedir = (distX < 0) ? 'left' : 'right' // if dist traveled is negative, it indicates left swipe
+                } else if (Math.abs(distY) >= threshold && Math.abs(distX) <= restraint) { // 2nd condition for vertical swipe met
+                  swipedir = (distY < 0) ? 'up' : 'down' // if dist traveled is negative, it indicates up swipe
                 }
-                return results;
-            }
-    
-            stackedCards.prototype.loopNodeList = function (els, callback, scope) {
-                for (var i = 0; i < els.length; i++) {
-                    callback.call(scope, els[i])
-                }
-            }
-    
-    
-            stackedCards.prototype.scrolledIn = function (el, offset) {
-                if (typeof el == 'undefined') return;
-    
-                var elemTop = el.getBoundingClientRect().top;
-                var elemBottom = el.getBoundingClientRect().bottom;
-    
-                var scrolledInEl = (elemTop >= 0) && (elemTop <= window.innerHeight);
-                return scrolledInEl;
-    
-            }
-    
-            stackedCards.prototype.detectSwipeDir = function (el, callback) {
-    
-                //credits: http://www.javascriptkit.com/javatutors/touchevents2.shtml
-    
-                var touchsurface = el,
-                    swipedir,
-                    startX,
-                    startY,
-                    distX,
-                    distY,
-                    threshold = 75, //required min distance traveled to be considered swipe
-                    restraint = 100, // maximum distance allowed at the same time in perpendicular direction
-                    allowedTime = 300, // maximum time allowed to travel that distance
-                    elapsedTime,
-                    startTime,
-                    handleswipe = callback || function (swipedir) {}
-    
-                touchsurface.addEventListener('touchstart', function (e) {
-                    var touchobj = e.changedTouches[0]
-                    swipedir = 'none'
-                    dist = 0
-                    startX = touchobj.pageX
-                    startY = touchobj.pageY
-                    startTime = new Date().getTime() // record time when finger first makes contact with surface
-                    e.preventDefault()
-                }, false)
-    
-                touchsurface.addEventListener('touchmove', function (e) {
-                    // e.preventDefault() // prevent scrolling when inside DIV
-                }, false)
-    
-                touchsurface.addEventListener('touchend', function (e) {
-                    var touchobj = e.changedTouches[0]
-                    distX = touchobj.pageX - startX // get horizontal dist traveled by finger while in contact with surface
-                    distY = touchobj.pageY - startY // get vertical dist traveled by finger while in contact with surface
-                    elapsedTime = new Date().getTime() - startTime // get time elapsed
-                    if (elapsedTime <= allowedTime) { // first condition for awipe met
-                        if (Math.abs(distX) >= threshold && Math.abs(distY) <= restraint) { // 2nd condition for horizontal swipe met
-                            swipedir = (distX < 0) ? 'left' : 'right' // if dist traveled is negative, it indicates left swipe
-                        } else if (Math.abs(distY) >= threshold && Math.abs(distX) <= restraint) { // 2nd condition for vertical swipe met
-                            swipedir = (distY < 0) ? 'up' : 'down' // if dist traveled is negative, it indicates up swipe
-                        }
-                    }
-                    handleswipe(swipedir)
-                    e.preventDefault()
-                }, false)
-    
-            }
-    
-            return stackedCards;
-    
+              }
+              handleswipe(swipedir)
+              e.preventDefault()
+            }, false)
+
+          }
+
+          return stackedCards;
+
         })();
-    }).call(this);
+      }).call(this);
     var stackedCard = new stackedCards({
-       selector: '.featured',
-       layout: "slide",
-       transformOrigin: "center",
+      selector: '.featured',
+      layout: "slide",
+      transformOrigin: "center",
     });
     stackedCard.init();
-          </script>
+  </script>
 
   <!-- Bootstrap core JavaScript-->
   <script src="vendor/jquery/jquery.min.js"></script>
